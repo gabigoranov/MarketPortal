@@ -1,0 +1,191 @@
+﻿@{
+    Layout = "~/Views/Shared/_LandingLayout.cshtml";
+    ViewData["Title"] = "Landing";
+}
+
+<header>
+    <div class="container">
+        <h1>Market</h1>
+        <nav>
+            <a class="link" asp-action="Register" asp-controller="User">Sign Up</a>
+            <a class="button" asp-action="Login" asp-controller="User">Seller Console</a>
+        </nav>
+    </div>
+</header>
+<main>
+    <section id="hero-section">
+        <div class="hero-container">
+            <div class="hero-text-container">
+                <h1 class="title">Fresh<br />Delicious<br />Local Groceries</h1>
+                <p>Support local farmers and enjoy farm-fresh<br />groceries delivered fast and easy.</p>
+                <br />
+                <div class="flex-container">
+                    <a class="action-button">Download</a>
+                    <a class="empty-button">Start Selling</a>
+                </div>
+            </div>
+            <img class="image" width="400px" height="600px" src="~/Images/landing-hero.jpg" />
+        </div>
+    </section>
+    <section id="how-section">
+        <div class="section-container">
+            <h2>How does it work?</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <i class="huge-icon fa-solid fa-cloud-arrow-down"></i>
+                    <div>
+                        <h2 class="card-title" style="margin: 30px;">Download</h2>
+                        <p style="text-align:justify;">
+                            First download the mobile application, create a profile and sign in.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="huge-icon fa-solid fa-cart-shopping"></i>
+                    <div>
+                        <h2 class="card-title" style="margin: 30px;">Order</h2>
+                        <p style="text-align:justify;">
+                            Once you have logged into the application you can quickly and easily choose and order some groceries from producers near you!
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="huge-icon fa-solid fa-box"></i>
+                    <div>
+                        <h2 class="card-title" style="margin: 30px;">Delivery</h2>
+                        <p style="text-align:justify;">
+                            After purchasing your groceries you can expect a delivery right to your home.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <section id="benefits-section">
+        <div class="section-container">
+            <h2>Why Choose Us?</h2>
+            <div class="flex-container why-us">
+                <img class="image" width="600px" height="500px" src="~/Images/why-us.jpg" />
+                <div class="benefits-text-container">
+                    <div class="benefits-text">
+                        <h3>Keep your money in your community.</h3>
+                        <p>If you choose to use our app you can support your local hardworking farmers.</p>
+                    </div>
+                    <div class="benefits-text">
+                        <h3>Keep your money in your community.</h3>
+                        <p>If you choose to use our app you can support your local hardworking farmers.</p>
+                    </div>
+                    <div class="benefits-text">
+                        <h3>Keep your money in your community.</h3>
+                        <p>If you choose to use our app you can support your local hardworking farmers.</p>
+                    </div>
+                    <div class="cta-container">
+                        <h2>Are you ready?</h2>
+                        <div class="flex-container">
+                            <a class="action-button">Download</a>
+                            <a class="empty-button">Start Selling</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq-section">
+        <div class="section-container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq">
+                    <div class="faq-text">
+                        <h3>Where do the products come from?</h3>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <p style="display: none;">
+                        All of our products come directly from local farmers and small producers in your area. We prioritize fresh, organic, and sustainable practices to ensure the best quality for you and support your local community.
+                    </p>
+                </div>
+                <div class="faq">
+                    <div class="faq-text">
+                        <h3>How do I know the food is fresh?</h3>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <p style="display: none;">
+                        Since the food is sourced directly from local farmers and producers, it's typically harvested or prepared shortly before it reaches you. We work closely with our partners to ensure that everything is delivered fresh and at peak quality.
+                    </p>
+                </div>
+                <div class="faq">
+                    <div class="faq-text">
+                        <h3>What if there’s an issue with my order?</h3>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <p style="display: none;">
+                        If there’s any problem with your order—such as missing items, incorrect products, or delivery issues—please contact our support team, and we’ll be happy to assist you.
+                    </p>
+                </div>
+                <div class="faq">
+                    <div class="faq-text">
+                        <h3>Can I return products if I’m not satisfied?</h3>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <p style="display: none;">
+                        Due to the perishable nature of food, returns are not typically accepted. However, if you’re not satisfied with your order, please reach out to us, and we’ll do our best to resolve the issue.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#hero-section">Home</a></li>
+                <li><a href="#how-section">How?</a></li>
+                <li><a href="#benefits-section">Benefits</a></li>
+                <li><a href="#faq-section">FAQ</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Contact Information</h4>
+            <ul>
+                <li>Email: <a href="mailto:info@yourwebsite.com">info@yourwebsite.com</a></li>
+                <li>Phone: <a href="tel:+1234567890">+1 234 567 890</a></li>
+                <li>Address: 123 Business St., City, Country</li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Image Credits</h4>
+            <ul>
+                <li><a href="https://www.pexels.com" target="_blank">Pexels</a></li>
+                <li><a href="https://www.unsplash.com" target="_blank">Unsplash</a></li>
+                <li><a href="https://www.pixabay.com" target="_blank">Pixabay</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    let faqs = document.getElementsByClassName("faq");
+    for (let faq of faqs) {
+        faq.addEventListener("mouseover", () => {
+            faq.style.height = "250px";
+            faq.children[0].children[1].className = "fa-solid fa-angle-up";
+            faq.children[1].style = "display: block;";
+
+        });
+        faq.addEventListener("mouseout", () => {
+            faq.style.height = "60px";
+            faq.children[0].children[1].className = "fa-solid fa-angle-down";
+            faq.children[1].style = "display: none;";
+
+        });
+    }
+</script>

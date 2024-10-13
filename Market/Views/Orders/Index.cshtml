@@ -1,0 +1,42 @@
+﻿@using Market.Data.Models
+@model List<Order>
+
+@{
+    ViewData["Title"] = "Orders";
+}
+
+
+<div class="orders-container">
+    <div class="left">
+        <h2>
+            Incoming Orders:
+        </h2>
+        <p>Please decide whether you can accept these orders.</p>
+        <hr />
+        <br />
+        <div class="orders">
+            @foreach (Order order in Model.Where(x => x.IsApproved == false).Reverse().ToList())
+            {
+                <partial name="_OrderPartial" model="@order" />
+            }
+        </div>
+    </div>
+    <div class="money">
+        You have an income of ??? in the past month.
+    </div>
+    <div class="accepted">
+        <h2>
+            Accepted Orders:
+        </h2>
+        <hr />
+        <br />
+
+        @foreach (Order order in Model.Where(x => x.IsApproved == true).Reverse().ToList())
+        {
+            <partial name="_AcceptedOrderPartial" model="@order" />
+        }
+    </div>
+</div>
+
+
+

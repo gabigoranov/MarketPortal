@@ -1,0 +1,61 @@
+﻿@using Market.Data.Models
+@using Market.Services
+@model AddUserViewModel
+@{
+    ViewData["Title"] = "Register";
+
+}
+
+<form class="form" asp-action="Register" method="post" enctype="multipart/form-data">
+    <div class="form-container">
+        <input id="image-input" asp-for="File" type="file" name="file" required />
+        <img id="image-display" src="#" alt="your profile image" /> 
+        <input asp-for="User.FirstName" placeholder="First Name" aria-required="true" />
+        <span asp-validation-for="User.FirstName" class="text-danger"></span>
+    </div>
+    <div class="form-container">
+        <input asp-for="User.LastName" placeholder="Last Name" aria-required="true" />
+        <span asp-validation-for="User.LastName" class="text-danger"></span>
+    </div>
+    <div class="form-container">
+        <input asp-for="User.Town" placeholder="Town" aria-required="true" />
+        <span asp-validation-for="User.Town" class="text-danger"></span>
+    </div>
+    <div class="form-container">
+        <input asp-for="User.Email" placeholder="Email" aria-required="true" />
+        <span asp-validation-for="User.Email" class="text-danger"></span>
+    </div>
+    <div class="form-container">
+        <input asp-for="User.PhoneNumber" placeholder="Phone Number" aria-required="true" />
+        <span asp-validation-for="User.PhoneNumber" class="text-danger"></span>
+    </div>
+    <div class="form-container">
+        <input asp-for="User.Age" placeholder="Age" aria-required="true" />
+        <span asp-validation-for="User.Age" class="text-danger"></span>
+    </div>
+    <div class="form-container">
+        <input asp-for="User.Description" placeholder="Description" aria-required="true" />
+        <span asp-validation-for="User.Description" class="text-danger"></span>
+    </div>
+    <div class="form-container">
+        <input asp-for="User.Password" placeholder="Password" aria-required="true" />
+        <span asp-validation-for="User.Password" class="text-danger"></span>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    function displayImage() {
+        var file = document.getElementById('image-input').files[0];
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            var image = document.createElement("img");
+            document.getElementById("image-display").src = e.target.result;
+        }
+        reader.readAsDataURL(file);
+    }
+
+    document.getElementById("image-input").onchange = () => {
+        displayImage();
+    };
+</script>

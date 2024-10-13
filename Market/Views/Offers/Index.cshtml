@@ -1,0 +1,12 @@
+﻿@using Market.Data.Models
+@model List<Offer>
+
+@{
+    ViewData["Title"] = "Offers";
+}
+
+@foreach (Offer offer in Model)
+{
+    <partial name="_OfferPartial" model="@offer" />
+}
+

@@ -1,0 +1,17 @@
+﻿@model UserViewModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<form class="login-form" asp-action="Login" method="post">
+    <div>
+        <input asp-for="@Model.Email" autocomplete="email" placeholder="Email" aria-required="true" />
+        <span asp-validation-for="@Model.Email" class="text-danger"></span>
+    </div>
+    <div>
+        <input asp-for="@Model.Password" autocomplete="password" placeholder="Password" aria-required="true" />
+        <span asp-validation-for="@Model.Password" class="text-danger"></span>
+    </div>
+    <button type="submit">Login</button>
+</form>

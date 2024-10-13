@@ -1,0 +1,12 @@
+﻿@using Market.Data.Models
+@model List<Review>
+
+@{
+    ViewData["Title"] = "Reviews";
+}
+
+@foreach (Review review in Model)
+{
+    <partial name="_ReviewPartial" model="@review" />
+}
+

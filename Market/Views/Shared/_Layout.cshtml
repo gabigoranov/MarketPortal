@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon"   href="/images/favicon.png">
+    <title>@ViewData["Title"] - Market</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Market.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <main role="main" class="pb-3">
+            <div class="sidebar-container">
+                <a class="logo" asp-area="" asp-controller="Home" asp-action="Index">Market</a>
+                <ul class="sidebar-navigation">
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" asp-area="" asp-controller="Home" asp-action="Index"><i class="fa-solid fa-gauge sidebar-icon"></i>Dashboard</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" asp-area="" asp-controller="Orders" asp-action="Index"><i class="fa-solid fa-truck sidebar-icon"></i>Orders</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" asp-area="" asp-controller="Offers" asp-action="Index"><i class="fa-brands fa-buffer sidebar-icon"></i>Offers</a>
+                    </li>
+                    <hr style="color: #636363" />
+                    <a class="sidebar-link-mini" asp-area="" asp-controller="Offers" asp-action="AddOffer">Add New Offer</a>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" asp-area="" asp-controller="Inventory" asp-action="Index"><i class="fa-solid fa-warehouse sidebar-icon"></i>Inventory</a>
+                    </li>
+                    <hr style="color: #636363" />
+                    <a class="sidebar-link-mini" asp-area="" asp-controller="Inventory" asp-action="Add">Register New Stock</a>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" asp-area="" asp-controller="Home" asp-action="Sales"><i class="fa-solid fa-clock-rotate-left sidebar-icon"></i>History</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" asp-area="" asp-controller="Home" asp-action="Sales"><i class="fa-solid fa-bell sidebar-icon"></i>Notifications</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" asp-area="" asp-controller="Reviews" asp-action="Index"><i class="fa-solid fa-comments sidebar-icon"></i>Reviews</a>
+                    </li>
+                    
+                </ul>
+                <a class="sidebar-help-link" asp-area="" asp-controller="Home" asp-action="Help">Need help?</a>
+            </div>
+            <div class="content">
+                <header>
+                    <form class="search-container">
+                        <input class="search" placeholder="Search here...."/>
+                        <button class="search-button" type="submit"><i class="fa-solid fa-magnifying-glass sidebar-icon"></i></button>
+                    </form>
+                    <partial name="_LoginPartial" />
+                </header>
+                <div class="page-container">
+                    @RenderBody()
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

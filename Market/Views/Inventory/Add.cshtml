@@ -1,0 +1,21 @@
+﻿@model StockViewModel
+
+@{
+    ViewData["Title"] = "Add Stock";
+}
+
+<form class="form" asp-action="Add" method="post" enctype="multipart/form-data">
+    <div class="form-container">
+        <input asp-for="Title" placeholder="Title" aria-required="true" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="form-container">
+        <input asp-for="OfferTypeId" placeholder="OfferTypeId" aria-required="true" />
+        <span asp-validation-for="OfferTypeId" class="text-danger"></span>
+    </div>
+    <div class="form-container">
+        <input asp-for="Quantity" placeholder="Quantity" aria-required="true" />
+        <span asp-validation-for="Quantity" class="text-danger"></span>
+    </div>
+    <button type="submit">Submit</button>
+</form>

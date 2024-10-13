@@ -1,0 +1,18 @@
+﻿@using Market.Data.Models
+@model User
+@{
+    ViewData["Title"] = "Profile";
+}
+<section class="profile-section">
+    <div class="profile-container">
+        <img class="image-display" src="~/profile.jpg" alt="your profile image" />
+        <div class="profile-data-container">
+            <h2>@(Model.FirstName + " " + Model.LastName)</h2>
+            <h3>@(Model.Town + ", Age: " + Model.Age + " Rating: " + Model.Rating)</h3>
+            <p class="profile-description">@Model.Description</p>
+        </div>
+    </div>
+</section>
+
+
+

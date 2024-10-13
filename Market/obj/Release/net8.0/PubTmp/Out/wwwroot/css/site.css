@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* setup */
+:root {
+    --accent: #4194cb;
+    --text-light: #FEFEFE;
+    --text-grey: #C7C7C8;
+    --text-dark: #000000;
+    --background-light: #FEFEFE;
+    --background-dark: #1E1E1E;
+    --font-mid: 22px;
+    --font-large: 32px;
+    --font-small: 14px;
+    --grey-light: #E9E9E9;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+html {
+  font-size: 14px;
+  ~
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+
+/* layout */
+main{
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar-container {
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+    min-width: 250px;
+    max-height: 100%;
+    background-color: var(--background-dark);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 12px;
+}
+
+.sidebar-navigation{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar-item{
+    background-color: var(--background-dark);
+    color: var(--text-grey);
+    width: 100%;
+    height: 52px;
+    transition: all 350ms;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 12px;
+}
+
+.sidebar-item:hover {
+    color: var(--text-light);
+    background-color: var(--accent);
+}
+
+.sidebar-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    font-family: "Kanit", sans-serif;
+    font-size: var(--font-mid);
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    padding-left: 14px;
+}
+.sidebar-link:hover{
+    color: inherit;
+}
+
+.content{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.page-container {
+    flex: 1 1 auto;
+    padding: 12px;
+    background-color: var(--grey-light);
+}
+
+header {
+    max-width: 100%;
+    height: 62px;
+    background-color: var(--background-light);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+    align-items: center;
+}
+
+
+.logo{
+    text-decoration: none;
+    color: var(--accent);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: var(--font-large);
+}
+
+.sidebar-icon{
+    font-size: var(--font-mid);
+    max-width: 24px;
+    margin-right: 22px;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: var(--background-dark);
+    font-size: var(--font-mid);
+    font-family: Arial;
+    font-weight: 600;
+}
+
+.navbar-nav{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.search-button{
+    border: none;
+    color: var(--background-dark);
+    background-color: transparent;
+}
+
+.search-button:hover{
+    cursor: pointer;
+}
+
+.search{
+    height: var(--font-large);
+    padding-left: 12px;
+    border-radius: 20px;
+    border-color: var(--background-dark);
+    width: 325px;
+}
+
+.search-container{
+    display:flex;
+    align-items: center;
+    gap: 12px;
+    padding-left: 20px;
+}
+
+.sidebar-link-mini {
+    color: var(--text-grey);
+    text-decoration: none;
+    font-family: "Kanit", sans-serif;
+    font-size: var(--font-small);
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    padding-left: 58px;
+    transition: all 250ms ease-in-out;
+}
+
+.sidebar-link-mini:hover {
+    color: var(--accent);
+}
+
+input {
+    height: var(--font-large);
+    border-radius: 20px;
+    padding-left: 12px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 300px;
+}
+
+.form button{
+    width: 100%;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.offer-partial-container {
+    background: var(--background-light);
+    border-radius: 20px;
+    padding: 12px 18px 12px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.offer-partial-container form button{
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: var(--font-large);
+}
+
+.offer-partial-form-buttons-container{
+    display: flex;
+    gap: 24px;
+}
+
+.offer-link{
+    text-decoration: none;
+    color: inherit;
+}
+
+.profile-container{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 112px;
+    width: 100%;
+    height: 100%;
+}
+
+.profile-container .image-display{
+    max-width: 50%;
+}
+
+.image-display{
+    border-radius: 20px;
+}
+
+.profile-description{
+    margin: 100px 0 100px 0;
+}
+
+.profile-section{
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+i{
+    font-size: var(--font-large);
+}
+
+.sidebar-help-link{
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    text-decoration: none;
+    color: var(--text-grey);
+}
+
+/*Orders*/
+.left{
+    grid-area: left;
+    background: var(--background-light);
+    border-radius: 10px;
+}
+.money {
+    grid-area: money;
+    background: var(--background-light);
+    border-radius: 10px;
+}
+.accepted {
+    grid-area: accepted;
+    background: var(--background-light);
+    border-radius: 10px;
+}
+
+.orders-container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+        "left money"
+        "left money"
+        "left accepted"
+        "left accepted"
+        "left accepted";
+    gap: 22px;
+}
+
+.orders-container > div{
+    padding: 12px;
+    box-shadow: rgba(0, 0, 0, 0.24) 1px 1.5px 3px;
+}
+.centered-container{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 22px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.warning{
+    color: darkred;
+}
+

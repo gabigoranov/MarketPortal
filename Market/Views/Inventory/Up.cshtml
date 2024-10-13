@@ -1,0 +1,12 @@
+﻿@model ChangeStockViewModel
+@{
+    ViewData["Title"] = "Up Stock";
+}
+
+<form class="form" asp-action="Up" method="post" enctype="multipart/form-data">
+    <div class="form-container">
+        <input asp-for="Quantity" placeholder="OfferTypeId" aria-required="true" />
+        <span asp-validation-for="Quantity" class="text-danger"></span>
+    </div>
+    <button type="submit">Submit</button>
+</form>

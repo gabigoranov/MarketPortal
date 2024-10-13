@@ -1,0 +1,49 @@
+﻿@using Market.Data.Models
+@using Market.Services
+@model AddOfferViewModel
+@{
+    ViewData["Title"] = "Offers";
+
+}
+
+<form class="form" asp-action="AddOffer" method="post" enctype="multipart/form-data">
+    <div class="form-container">
+        <input id="image-input" asp-for="File" type="file" name="file" required />
+        <img id="image-display" src="#" alt="your image" />
+        <input asp-for="Offer.Title" placeholder="Title" aria-required="true" />
+        <span asp-validation-for="Offer.Title" class="text-danger"></span>
+    </div>
+    <div class="form-container">
+        <input asp-for="Offer.Town" placeholder="Town" aria-required="true" />
+        <span asp-validation-for="Offer.Town" class="text-danger"></span>
+    </div>
+    <div class ="form-container">
+        <input asp-for="Offer.Description" placeholder="Description" aria-required="true" />
+        <span asp-validation-for="Offer.Description" class="text-danger"></span>
+    </div>
+    <div class ="form-container">
+        <input asp-for="Offer.PricePerKG" placeholder="PricePerKG" aria-required="true" />
+        <span asp-validation-for="Offer.PricePerKG" class="text-danger"></span>
+    </div>
+    <div class="form-container">
+        <input asp-for="Offer.StockId" placeholder="OfferTypeId" aria-required="true" />
+        <span asp-validation-for="Offer.StockId" class="text-danger"></span>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    function displayImage() {
+        var file = document.getElementById('image-input').files[0];
+        var reader  = new FileReader();
+        reader.onload = function(e)  {
+            var image = document.createElement("img");
+            document.getElementById("image-display").src = e.target.result;
+         }
+         reader.readAsDataURL(file);
+     }
+
+     document.getElementById("image-input").onchange = () => {
+         displayImage();
+     };
+</script>

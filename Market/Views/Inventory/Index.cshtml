@@ -1,0 +1,18 @@
+﻿@using Market.Data.Models
+@model List<Stock>
+
+@{
+    ViewData["Title"] = "Inventory";
+}
+
+<div class="centered-container">
+    <h1>
+        The stocks in your inventory:
+    </h1>
+    @foreach (Stock stock in Model)
+    {
+        <partial name="_StockPartial" model="@stock" />
+    }
+
+</div>
+
