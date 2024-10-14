@@ -43,12 +43,21 @@
                     
                 </ul>
                 <a class="sidebar-help-link" asp-area="" asp-controller="Home" asp-action="Help">Need help?</a>
+                <div id="sidebar-login-partial">
+                    <partial name="_LoginPartial" />
+
+                </div>
+
             </div>
             <div class="content">
                 <header>
                     <form class="search-container">
                         <input class="search" placeholder="Search here...."/>
                         <button class="search-button" type="submit"><i class="fa-solid fa-magnifying-glass sidebar-icon"></i></button>
+
+                        <a href="javascript:void(0);" id="hamburger-icon" class="icon" onclick="toggleSidebar()">
+                            <i class="fa fa-bars"></i>
+                        </a>
                     </form>
                     <partial name="_LoginPartial" />
                 </header>

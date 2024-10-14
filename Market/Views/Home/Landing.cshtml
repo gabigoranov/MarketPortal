@@ -10,8 +10,19 @@
             <a class="link" asp-action="Register" asp-controller="User">Sign Up</a>
             <a class="button" asp-action="Login" asp-controller="User">Seller Console</a>
         </nav>
+
+        
+        <a href="javascript:void(0);" id="hamburger-icon" class="icon" onclick="toggleNav()">
+            <i class="fa fa-bars"></i>
+        </a>
+
     </div>
+    
 </header>
+<div id="hamburger-nav">
+    <a class="link" asp-action="Register" asp-controller="User">Sign Up</a>
+    <a class="button" asp-action="Login" asp-controller="User">Seller Console</a>
+</div>
 <main>
     <section id="hero-section">
         <div class="hero-container">
@@ -21,7 +32,7 @@
                 <br />
                 <div class="flex-container">
                     <a class="action-button">Download</a>
-                    <a class="empty-button">Start Selling</a>
+                    <a class="empty-button">Sell Now</a>
                 </div>
             </div>
             <img class="image" width="400px" height="600px" src="~/Images/landing-hero.jpg" />
@@ -69,16 +80,16 @@
                 <img class="image" width="600px" height="500px" src="~/Images/why-us.jpg" />
                 <div class="benefits-text-container">
                     <div class="benefits-text">
-                        <h3>Keep your money in your community.</h3>
-                        <p>If you choose to use our app you can support your local hardworking farmers.</p>
+                        <h3>Freshness and Quality</h3>
+                        <p>By purchasing directly from local farmers and producers, you get access to the freshest ingredients.</p>
                     </div>
                     <div class="benefits-text">
-                        <h3>Keep your money in your community.</h3>
-                        <p>If you choose to use our app you can support your local hardworking farmers.</p>
+                        <h3>Supporting the Local Community</h3>
+                        <p>Every purchase you make through the app helps sustain local farms and small businesses.</p>
                     </div>
                     <div class="benefits-text">
-                        <h3>Keep your money in your community.</h3>
-                        <p>If you choose to use our app you can support your local hardworking farmers.</p>
+                        <h3>Sustainable and Eco-friendly</h3>
+                        <p>Buying local means fewer food miles, reducing the environmental impact of transportation and packaging.</p>
                     </div>
                     <div class="cta-container">
                         <h2>Are you ready?</h2>
@@ -152,23 +163,22 @@
         <div class="footer-section">
             <h4>Contact Information</h4>
             <ul>
-                <li>Email: <a href="mailto:info@yourwebsite.com">info@yourwebsite.com</a></li>
-                <li>Phone: <a href="tel:+1234567890">+1 234 567 890</a></li>
-                <li>Address: 123 Business St., City, Country</li>
+                <li>Email: <a href="mailto:gabigoranov@abv.bg">gabigoranov@abv.bg</a></li>
+                <li>Phone: <a href="tel:+359 89 658 3578">+359 89 658 3578</a></li>
             </ul>
         </div>
 
         <div class="footer-section">
             <h4>Image Credits</h4>
             <ul>
-                <li><a href="https://www.pexels.com" target="_blank">Pexels</a></li>
-                <li><a href="https://www.unsplash.com" target="_blank">Unsplash</a></li>
-                <li><a href="https://www.pixabay.com" target="_blank">Pixabay</a></li>
+                <li><a href="https://www.pexels.com" >Pexels</a></li>
+                <li><a href="https://www.freepik.com/">Freepik</a></li>
+                <li><a href="https://www.pixabay.com" >Pixabay</a></li>
             </ul>
         </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; 2024 Your Website. All rights reserved.</p>
+        <p>&copy; 2024 Farmers-Market. All rights reserved.</p>
     </div>
 </footer>
 
@@ -187,5 +197,18 @@
             faq.children[1].style = "display: none;";
 
         });
+    }
+
+    function toggleNav() {
+        var x = document.getElementById("hamburger-nav");
+        var icon = document.getElementById("hamburger-icon");
+        if (x.style.display === "flex") {
+            x.style.display = "none";
+            icon.children[0].className = "fa fa-bars";
+            
+        } else {
+            x.style.display = "flex";
+            icon.children[0].className = "fa-solid fa-xmark";
+        }
     }
 </script>

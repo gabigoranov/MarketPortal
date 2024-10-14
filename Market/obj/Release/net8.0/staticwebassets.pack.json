@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Market.bundle.scp.css"
     },
     {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\image-display-alt.png",
+      "PackagePath": "staticwebassets\\Images\\image-display-alt.png"
+    },
+    {
       "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\landing-hero.jpg",
       "PackagePath": "staticwebassets\\Images\\landing-hero.jpg"
     },

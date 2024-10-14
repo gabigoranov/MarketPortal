@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "V/1wwMW8ZyhBC4zOq44Jdr2sp9HxIhKFy/H/kM6W0EY=",
+  "Hash": "MSunsgLVMP+XmwtJkUL7KVchmrPHAF53G9YosiUg//M=",
   "Source": "Market",
   "BasePath": "_content/Market",
   "Mode": "Default",
@@ -1269,6 +1269,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\image-display-alt.png",
+      "SourceId": "Market",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Projects\\Market\\Market\\wwwroot\\",
+      "BasePath": "_content/Market",
+      "RelativePath": "Images/image-display-alt.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\image-display-alt.png"
     },
     {
       "Identity": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\landing-hero.jpg",

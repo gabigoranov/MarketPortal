@@ -1,4 +1,16 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿function toggleSidebar() {
+    var x = document.getElementsByClassName("sidebar-container")[0];
+    var icon = document.getElementById("hamburger-icon");
+    if (x.style.display === "flex") {
+        x.style.display = "none";
+        x.classList.toggle("open");
+        x.offsetHeight;
+        icon.children[0].className = "fa fa-bars";
 
-// Write your JavaScript code.
+    } else {
+        x.style.display = "flex";
+        x.classList.toggle("open");
+        x.offsetHeight;
+        icon.children[0].className = "fa-solid fa-xmark";
+    }
+}

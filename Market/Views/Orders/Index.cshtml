@@ -14,7 +14,7 @@
         <p>Please decide whether you can accept these orders.</p>
         <hr />
         <br />
-        <div class="orders">
+        <div class="orders gapped">
             @foreach (Order order in Model.Where(x => x.IsApproved == false).Reverse().ToList())
             {
                 <partial name="_OrderPartial" model="@order" />
@@ -30,11 +30,13 @@
         </h2>
         <hr />
         <br />
-
-        @foreach (Order order in Model.Where(x => x.IsApproved == true).Reverse().ToList())
-        {
-            <partial name="_AcceptedOrderPartial" model="@order" />
-        }
+        <div class="gapped">
+            @foreach (Order order in Model.Where(x => x.IsApproved == true).Reverse().ToList())
+            {
+                <partial name="_AcceptedOrderPartial" model="@order" />
+            }
+        </div>
+        
     </div>
 </div>
 

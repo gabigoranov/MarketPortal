@@ -7,9 +7,10 @@
 }
 
 <form class="form" asp-action="AddOffer" method="post" enctype="multipart/form-data">
-    <div class="form-container">
+    <div class="form-container gapped">
+        <label class="custom-file-upload" for="image-input">Select Image</label>
         <input id="image-input" asp-for="File" type="file" name="file" required />
-        <img id="image-display" src="#" alt="your image" />
+        <img id="image-display" src="~/Images/image-display-alt.png"/>
         <input asp-for="Offer.Title" placeholder="Title" aria-required="true" />
         <span asp-validation-for="Offer.Title" class="text-danger"></span>
     </div>
@@ -29,7 +30,7 @@
         <input asp-for="Offer.StockId" placeholder="OfferTypeId" aria-required="true" />
         <span asp-validation-for="Offer.StockId" class="text-danger"></span>
     </div>
-    <button type="submit">Submit</button>
+    <button class="form-submit" type="submit">Submit</button>
 </form>
 
 <script>
