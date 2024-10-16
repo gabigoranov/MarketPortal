@@ -6,6 +6,8 @@ using System.Text;
 using System.Text.Json;
 using System.Diagnostics;
 using Market.Services.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 
 namespace Market.Services
 {
@@ -13,7 +15,7 @@ namespace Market.Services
     {
         private readonly IHttpClientFactory factory;
         private readonly IHttpContextAccessor httpContextAccessor;
-        private readonly IAuthenticationService authService;
+        private readonly Authentication.IAuthenticationService authService;
         private readonly HttpClient client;
         private User? User;
 

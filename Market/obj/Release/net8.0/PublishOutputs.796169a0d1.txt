@@ -4,6 +4,8 @@ E:\Projects\Market\Market\obj\Release\net8.0\PubTmp\Out\appsettings.json
 E:\Projects\Market\Market\obj\Release\net8.0\PubTmp\Out\Market.dll
 E:\Projects\Market\Market\obj\Release\net8.0\PubTmp\Out\Market.runtimeconfig.json
 E:\Projects\Market\Market\obj\Release\net8.0\PubTmp\Out\Market.pdb
+E:\Projects\Market\Market\obj\Release\net8.0\PubTmp\Out\bg-BG\Market.resources.dll
+E:\Projects\Market\Market\obj\Release\net8.0\PubTmp\Out\en-US\Market.resources.dll
 E:\Projects\Market\Market\obj\Release\net8.0\PubTmp\Out\Azure.Core.dll
 E:\Projects\Market\Market\obj\Release\net8.0\PubTmp\Out\Azure.Identity.dll
 E:\Projects\Market\Market\obj\Release\net8.0\PubTmp\Out\Firebase.Auth.dll

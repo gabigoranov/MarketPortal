@@ -276,3 +276,10 @@ E:\Projects\Market\Market\bin\Release\net8.0\Microsoft.AspNetCore.Identity.UI.dl
 E:\Projects\Market\Market\bin\Release\net8.0\Microsoft.Extensions.FileProviders.Embedded.dll
 E:\Projects\Market\Market\bin\Release\net8.0\RestSharp.dll
 E:\Projects\Market\Market\obj\Release\net8.0\Market.MvcApplicationPartsAssemblyInfo.cs
+E:\Projects\Market\Market\bin\Release\net8.0\bg-BG\Market.resources.dll
+E:\Projects\Market\Market\bin\Release\net8.0\en-US\Market.resources.dll
+E:\Projects\Market\Market\obj\Release\net8.0\Market.Resources.Views.Home.Landing.bg-BG.resources
+E:\Projects\Market\Market\obj\Release\net8.0\Market.Resources.Views.Home.Landing.en-US.resources
+E:\Projects\Market\Market\obj\Release\net8.0\Market.csproj.GenerateResource.cache
+E:\Projects\Market\Market\obj\Release\net8.0\bg-BG\Market.resources.dll
+E:\Projects\Market\Market\obj\Release\net8.0\en-US\Market.resources.dll

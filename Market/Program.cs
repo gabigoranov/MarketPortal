@@ -11,6 +11,10 @@ using Microsoft.EntityFrameworkCore;
 using Market.Data.Models;
 using Microsoft.AspNetCore.Builder;
 using Market.Services.Authentication;
+using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.AspNetCore.Localization;
+using System.Globalization;
+using Microsoft.Extensions.Options;
 
 var cookiePolicyOptions = new CookiePolicyOptions
 {
@@ -19,7 +23,8 @@ var cookiePolicyOptions = new CookiePolicyOptions
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews()
+     .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix);
 builder.Services.AddHttpClient();
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
@@ -29,6 +34,23 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.SlidingExpiration = true;
         options.AccessDeniedPath = "/Forbidden/";
     });
+
+builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+builder.Services.Configure<RequestLocalizationOptions>(options =>
+{
+    var supportedCultures = new[]
+                {
+                    new CultureInfo("bg-BG"),
+                    new CultureInfo("en-US"),
+                };
+    options.DefaultRequestCulture = new RequestCulture(culture: "bg-BG", uiCulture: "bg-BG");
+
+    options.SupportedCultures = supportedCultures;
+    options.SupportedUICultures = supportedCultures;
+    var questStringCultureProvider = options.RequestCultureProviders[0];
+    options.RequestCultureProviders.RemoveAt(0);
+    options.RequestCultureProviders.Insert(1, questStringCultureProvider);
+});
 
 builder.Services.AddHttpContextAccessor();
 
@@ -41,6 +63,9 @@ builder.Services.AddScoped<IOrdersService, OrdersService>();
 builder.Services.AddScoped<IReviewsService, ReviewsService>();
 
 var app = builder.Build();
+var locOptions = app.Services.GetService<IOptions<RequestLocalizationOptions>>();
+app.UseRequestLocalization(locOptions.Value);
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -51,6 +76,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
 app.UseStaticFiles();
 app.UseCookiePolicy(cookiePolicyOptions);
 

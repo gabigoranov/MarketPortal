@@ -478,5 +478,9 @@ footer {
         height: 100%;
         overflow-x: hidden;
     }
+
+    .benefits-text {
+        text-align: justify !important;
+    }
 }
 

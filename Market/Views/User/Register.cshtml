@@ -8,8 +8,13 @@
 
 <form class="form" asp-action="Register" method="post" enctype="multipart/form-data">
     <div class="form-container">
+        <label class="custom-file-upload" for="image-input">Select Image</label>
         <input id="image-input" asp-for="File" type="file" name="file" required />
-        <img id="image-display" src="#" alt="your profile image" /> 
+    </div>
+    <div class="form-container">
+        <img id="image-display" src="~/Images/image-display-alt.png" />
+    </div>
+    <div class="form-container">
         <input asp-for="User.FirstName" placeholder="First Name" aria-required="true" />
         <span asp-validation-for="User.FirstName" class="text-danger"></span>
     </div>

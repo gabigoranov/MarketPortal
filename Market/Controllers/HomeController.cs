@@ -1,6 +1,7 @@
 using Market.Data.Models;
 using Market.Models;
 using Market.Services;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using System.Security.Claims;
@@ -19,6 +20,18 @@ namespace Market.Controllers
             _logger = logger;
             _userService = userService;
             _user = _userService.GetUser();
+        }
+
+        [HttpPost]
+        public IActionResult SetLanguage(string culture, string returnUrl)
+        {
+            Response.Cookies.Append(
+                CookieRequestCultureProvider.DefaultCookieName,
+                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+                new CookieOptions { Expires = DateTimeOffset.UtcNow.AddMinutes(2) } //increase time
+            );
+
+            return LocalRedirect(returnUrl);
         }
 
         public IActionResult Index()
