@@ -10,8 +10,21 @@
         <span asp-validation-for="Title" class="text-danger"></span>
     </div>
     <div class="form-container">
-        <input asp-for="OfferTypeId" placeholder="OfferTypeId" aria-required="true" />
-        <span asp-validation-for="OfferTypeId" class="text-danger"></span>
+        <select asp-for="OfferTypeId">
+            <option value="1">Apples</option>
+            <option value="2">Bananas</option>
+            <option value="3">Grapes</option>
+            <option value="4">Lemons</option>
+            <option value="5">Oranges</option>
+            <option value="6">Strawberries</option>
+            <option value="7">Carrots</option>
+            <option value="8">Lettuce</option>
+            <option value="9">Onions</option>
+            <option value="10">Potatoes</option>
+            <option value="11">Tomatoes</option>
+            <option value="12">Eggs</option>
+            <option value="13">Steak</option>
+        </select>
     </div>
     <div class="form-container">
         <input asp-for="Quantity" placeholder="Quantity" aria-required="true" />

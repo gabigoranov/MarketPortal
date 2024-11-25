@@ -1,10 +1,12 @@
 ﻿using Market.Data.Models;
 using Market.Models;
 using Market.Services.Inventory;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Market.Controllers
 {
+    [Authorize]
     public class InventoryController : Controller
     {
         private readonly IInventoryService _inventoryServive;

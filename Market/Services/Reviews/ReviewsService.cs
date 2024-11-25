@@ -1,16 +1,25 @@
 ﻿using Market.Data.Models;
+using Market.Services.Authentication;
+using System.Text.Json;
 
 namespace Market.Services.Reviews
 {
     public class ReviewsService : IReviewsService
     {
-        private readonly User user;
+        private User user;
         private readonly IUserService userService;
+        private readonly IHttpClientFactory _httpClientFactory;
+        private readonly HttpClient client;
+        private readonly IAuthenticationService _authenticationService;
 
-        public ReviewsService(IUserService _userService) {
+        public ReviewsService(IUserService _userService, IHttpClientFactory httpClientFactory, IAuthenticationService authenticationService)
+        {
             userService = _userService;
             user = userService.GetUser();
-
+            _httpClientFactory = httpClientFactory;
+            client = _httpClientFactory.CreateClient();
+            client.BaseAddress = new Uri("https://farmers-market.sommee.com/api/");
+            _authenticationService = authenticationService;
         }
 
 
@@ -27,6 +36,19 @@ namespace Market.Services.Reviews
         public List<Review> GetOfferReviewsAsync(int offerId)
         {
             return user.Offers.Single(x => x.Id == offerId).Reviews.ToList();
+        }
+
+        public async Task RemoveReviewAsync(int id)
+        {
+            string url = $"https://farmers-api.runasp.net/api/reviews/delete?id={id}";
+            user.Offers.Single(x => x.Reviews.Any(x => x.Id == id)).Reviews.Remove(user.Offers.Single(x => x.Reviews.Any(x => x.Id == id)).Reviews.Single(x => x.Id == id));
+            string role = "Seller";
+            if (user.Discriminator == 2)
+            {
+                role = "Organization";
+            }
+            await _authenticationService.SignInAsync(JsonSerializer.Serialize<User>(user), role);
+            var response = await client.DeleteAsync(url);
         }
     }
 }

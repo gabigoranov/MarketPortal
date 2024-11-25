@@ -13,5 +13,6 @@ namespace Market.Services.Offers
         public Task EditAsync(OfferViewModel model);
 
         public OfferViewModel ConvertOfferToViewModel(Offer offer);
+        public Task<List<Offer>> GetDiscoverOffers();
     }
 }

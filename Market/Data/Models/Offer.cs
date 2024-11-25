@@ -20,6 +20,9 @@ namespace Market.Data.Models
         [StringLength(300)]
         public string Description { get; set; }
 
+        public double AvgRating => Reviews.Count > 0 ? Math.Round(Reviews.Select(x => x.Rating).Average(), 2) : 0;
+        
+
         [Required]
         public double PricePerKG { get; set; }
         [Required]

@@ -16,14 +16,14 @@ namespace Market.Services.Orders
         {
             _httpClientFactory = httpClientFactory;
             this.client = client;
-            this.client.BaseAddress = new System.Uri("https://farmers-market.somee.com/api/");
+            this.client.BaseAddress = new System.Uri("https://farmers-api.runasp.net/api/");
             _contextAccessor = contextAccessor;
         }
 
 
         public async Task ApproveOrderAsync(int id)
         {
-            string url = $"https://farmers-market.somee.com/api/orders/accept?id={id}";
+            string url = $"orders/accept?id={id}";
             var response = await client.GetAsync(url); 
             if (!response.IsSuccessStatusCode)
             {
@@ -34,7 +34,7 @@ namespace Market.Services.Orders
 
         public async Task DeclineOrderAsync(int id)
         {
-            string url = $"https://farmers-market.somee.com/api/orders/decline?id={id}";
+            string url = $"orders/decline?id={id}";
             var response = await client.GetAsync(url);
             if (!response.IsSuccessStatusCode)
             {
@@ -54,7 +54,7 @@ namespace Market.Services.Orders
 
         public async Task<List<Order>> GetUserOrders(Guid id)
         {
-            var url = $"https://farmers-market.somee.com/api/orders/getall";
+            var url = $"https://farmers-api.runasp.net/api/orders/getall";
             var response = await client.GetAsync(url);
             var result = new List<Order>();
             if (response.IsSuccessStatusCode)

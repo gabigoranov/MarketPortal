@@ -1,12 +1,61 @@
 ﻿@using Market.Data.Models
-@model List<Review>
+@model ReviewPageViewModel
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 
 @{
     ViewData["Title"] = "Reviews";
+    double posReviews = Model.Reviews.Where(x => x.Rating <= 2.5).Count();
+    double negReviews = Model.Reviews.Where(x => x.Rating > 2.5).Count();
+    double count = Model.Reviews.Count();
+    double posPercentage = Math.Round(posReviews/count*100, 1);
+    double negPercentage = 100-posPercentage;
+    double avgRating = Math.Round(Model.Reviews.Select(x => x.Rating).Sum() / Model.Reviews.Count, 1);
 }
 
-@foreach (Review review in Model)
-{
-    <partial name="_ReviewPartial" model="@review" />
-}
 
+<div class="orders-container">
+    <div class="left">
+        <h2>
+            @Localizer["LatestReviews"]
+        </h2>
+        <p>@Localizer["ReviewsParagraph"]</p>
+        <hr />
+        <br />
+        <div class="orders gapped scrollable" style="height: 80%;">
+            @foreach (Review review in Model.Reviews)
+            {
+                <partial name="_ReviewPartial" model="@review" />
+            }
+        </div>
+    </div>
+    <div class="money">
+        <h2>
+            @Localizer["MoneyTitle1"] @Model.Reviews.Count @Localizer["MoneyTitle2"]
+        </h2>
+        <hr />
+        <br />
+        <div>
+            <h3>@(posPercentage)% @Localizer["ReviewsArePositive"]</h3>
+            <h3>@(negPercentage)% @Localizer["ReviewsAreNegative"]</h3>
+            <h3>@(avgRating)★ @Localizer["ReviewsAverage"]</h3>
+            
+        </div>
+        
+    </div>
+    <div class="accepted">
+        <h2>
+            @Localizer["OffersTitle"]
+        </h2>
+        <hr />
+        <br />
+        <div class="gapped scrollable" style="height: 92%;">
+            @foreach (Offer offer in Model.Offers)
+            {
+                
+                <partial name="_OfferPartial" model="@offer" />
+            }
+        </div>
+        
+    </div>
+</div>

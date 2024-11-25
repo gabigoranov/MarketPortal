@@ -10,5 +10,8 @@ namespace Market.Data.Models
         [Required]
         [StringLength(22)]
         public string Name { get; set; }
+
+        [Required]
+        public string Category { get; set; }
     }
 }

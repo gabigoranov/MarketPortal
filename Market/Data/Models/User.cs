@@ -13,21 +13,21 @@ namespace Market.Data.Models
 
         [Required]
         [StringLength(12)]
-        public string FirstName { get; set; }
+        public virtual string FirstName { get; set; }
 
         [Required]
         [StringLength(12)]
-        public string LastName { get; set; }
+        public virtual string LastName { get; set; }
 
         [Required]
-        public int Age { get; set; }
+        public virtual int Age { get; set; }
 
 
         [Required]
         [EmailAddress]
         public string Email { get; set; }
 
-        public double Rating { get; set; } = 0.0;
+
 
         [Required]
         [Phone]
@@ -44,11 +44,20 @@ namespace Market.Data.Models
 
         [Required]
         public string Town { get; set; }
-        public List<Offer> Offers { get; set; } = new List<Offer>();
+
+        [Required]
+        public int Discriminator { get; set; }
+
+        public string? FirebaseToken { get; set; }
+
+        public string? OrganizationName { get; set; }
+
+        [Required]
+        public double Rating { get; set; } = 0.0;
         public virtual ICollection<Order> SoldOrders { get; set; } = new List<Order>();
+        public List<Offer> Offers { get; set; } = new List<Offer>();
 
-
-        public bool IsSeller { get; set; } = true;
+        public ICollection<Order> BoughtOrders { get; set; } = new List<Order>();
 
     }
 }

@@ -1,5 +1,7 @@
 ﻿@using Market.Data.Models
 @model List<Stock>
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 
 @{
     ViewData["Title"] = "Inventory";
@@ -7,7 +9,7 @@
 
 <div class="centered-container">
     <h1>
-        The stocks in your inventory:
+        @Localizer["Title"]
     </h1>
     <div class="gapped">
         @foreach (Stock stock in Model)

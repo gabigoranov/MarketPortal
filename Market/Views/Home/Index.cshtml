@@ -1,10 +1,85 @@
-﻿
+﻿@using Market.Models
+@using Market.Data.Models
+@model OverviewViewModel
 
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Overview";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+<div class="overview-container">
+    <div class="orders">
+        <h2>
+            Incoming Orders:
+        </h2>
+        <a asp-action="Index" asp-controller="Orders">For more info click here</a>
+        <hr />
+        <br />
+        <div class="orders gapped scrollable" style="height: 80%;">
+            @foreach (Order order in Model.Orders.Where(x => x.IsAccepted == false && x.IsDenied == false).Reverse().ToList())
+            {
+                <partial name="_OrderPartial" model="@order" />
+            }
+        </div>
+    </div>
+    <div class="money">
+        <canvas id="incomeChart"></canvas>
+    </div>
+    <div class="reviews">
+        <h2>
+            Recent reviews:
+        </h2>
+        <a asp-action="Index" asp-controller="Reviews">For more info click here</a>
+        <hr />
+        <br />
+        <div class="gapped">
+            @foreach (Review review in Model.Reviews.Take(4).Reverse().ToList())
+            {
+                <partial name="_ReviewPartial" model="@review" />
+            }
+        </div>
+    </div>
+    <div class="stocks ">
+        <h2>
+            Low stocks:
+        </h2>
+        <a asp-action="Index" asp-controller="Reviews">For more info click here</a>
+        <hr />
+        <br />
+        <div class="gapped scrollable" style="height: 80%;">
+            @foreach (Stock stock in Model.Stocks.OrderBy(x => x.Quantity).Take(4).Reverse().ToList())
+            {
+                <partial name="_StockPartial" model="@stock" />
+            }
+        </div>
+    </div>
 </div>
+
+
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var ctx = document.getElementById('incomeChart').getContext('2d');
+        var totalIncome = @Html.Raw(Json.Serialize(Model.Orders.Where(x => x.IsAccepted).Select(m => m.Price).Sum().ToString()));
+        var incomeChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: @Html.Raw(Json.Serialize(Model.Orders.Where(x => x.IsAccepted).Select(m => m.DateOrdered.ToString("yyyy-MM-dd")))),
+                datasets: [{
+                    label: `Orders, Income: ${totalIncome}`,
+                    data: @Html.Raw(Json.Serialize(Model.Orders.Where(x => x.IsAccepted).Select(m => m.Price))),
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    x: { display: true },
+                    y: { display: true }
+                }
+            }
+        });
+    </script>
+}

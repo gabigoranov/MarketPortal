@@ -5,12 +5,15 @@ using Market.Models;
 using Market.Services;
 using Market.Services.Firebase;
 using Market.Services.Offers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.DataProtection.KeyManagement;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Sockets;
 
 namespace Market.Controllers
 {
+    [Authorize]
+
     public class OffersController : Controller
     {
         private readonly IOfferService _offerService;
@@ -89,6 +92,21 @@ namespace Market.Controllers
         {
             Offer offer = await _offerService.GetByIdAsync(id);
             return View(offer);
+        }
+
+        [HttpGet]
+        [Authorize(Roles = "Organization")]
+        public async Task<IActionResult> Discover()
+        {
+            List<Offer> offers = await _offerService.GetDiscoverOffers();
+            return View(offers);
+        }
+        
+        [HttpPost]
+        public IActionResult FilterByCategory(string category, List<Offer> offers)
+        {
+            var filteredOffers = offers.Where(o => o.Stock.OfferType.Category == category).ToList();
+            return View("Discover", filteredOffers);
         }
     }
 }

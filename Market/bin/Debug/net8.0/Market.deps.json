@@ -27,11 +27,11 @@
           "Market.dll": {}
         },
         "resources": {
-          "bg-BG/Market.resources.dll": {
-            "locale": "bg-BG"
+          "bg/Market.resources.dll": {
+            "locale": "bg"
           },
-          "en-US/Market.resources.dll": {
-            "locale": "en-US"
+          "en/Market.resources.dll": {
+            "locale": "en"
           }
         }
       },

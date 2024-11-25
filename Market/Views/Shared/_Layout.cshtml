@@ -1,11 +1,22 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Онлайн фермерски пазар - приложение и уебсайт"> 
+    <meta name="keywords" content="фермерски пазар, плодове, зеленчуци, плодове и зеленчуци, производители, купи">
+    <meta name="author" content="Габриел Горанов"> 
+    <meta property="og:title" content="Фермерски Пазар">
+    <meta property="og:description" content="Онлайн фермерски пазар - приложение и уебсайт">
+
     <link rel="icon" type="image/x-icon"   href="~/favicon.ico">
     <title>@ViewData["Title"] - Market</title>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link href="~/manifest.json" rel="manifest" />
     <link rel="stylesheet" href="~/Market.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -13,36 +24,35 @@
     <div class="container">
         <main role="main" class="pb-3">
             <div class="sidebar-container">
-                <a class="logo" asp-area="" asp-controller="Home" asp-action="Index">Market</a>
+                <a class="logo" asp-area="" asp-controller="Home" asp-action="Landing">Market</a>
                 <ul class="sidebar-navigation">
                     <li class="sidebar-item">
-                        <a class="sidebar-link" asp-area="" asp-controller="Home" asp-action="Index"><i class="fa-solid fa-gauge sidebar-icon"></i>Dashboard</a>
+                        <a class="sidebar-link" asp-area="" asp-controller="Home" asp-action="Index"><i class="fa-solid fa-gauge sidebar-icon"></i>@Localizer["Dashboard"]</a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" asp-area="" asp-controller="Orders" asp-action="Index"><i class="fa-solid fa-truck sidebar-icon"></i>Orders</a>
+                        <a class="sidebar-link" asp-area="" asp-controller="Orders" asp-action="Index"><i class="fa-solid fa-truck sidebar-icon"></i>@Localizer["Orders"]</a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" asp-area="" asp-controller="Offers" asp-action="Index"><i class="fa-brands fa-buffer sidebar-icon"></i>Offers</a>
-                    </li>
-                    <hr style="color: #636363" />
-                    <a class="sidebar-link-mini" asp-area="" asp-controller="Offers" asp-action="AddOffer">Add New Offer</a>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" asp-area="" asp-controller="Inventory" asp-action="Index"><i class="fa-solid fa-warehouse sidebar-icon"></i>Inventory</a>
+                        <a class="sidebar-link" asp-area="" asp-controller="Offers" asp-action="Index"><i class="fa-brands fa-buffer sidebar-icon"></i>@(User.IsInRole("Seller") ? @Localizer["Offers"] : @Localizer["Discover"])</a>
                     </li>
                     <hr style="color: #636363" />
-                    <a class="sidebar-link-mini" asp-area="" asp-controller="Inventory" asp-action="Add">Register New Stock</a>
+                    <a class="sidebar-link-mini" asp-area="" asp-controller="Offers" asp-action="AddOffer">@Localizer["AddNewOffer"]</a>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" asp-area="" asp-controller="Home" asp-action="Sales"><i class="fa-solid fa-clock-rotate-left sidebar-icon"></i>History</a>
+                        <a class="sidebar-link" asp-area="" asp-controller="Inventory" asp-action="Index"><i class="fa-solid fa-warehouse sidebar-icon"></i>@Localizer["Inventory"]</a>
                     </li>
+                    <hr style="color: #636363" />
+                    <a class="sidebar-link-mini" asp-area="" asp-controller="Inventory" asp-action="Add">@Localizer["RegisterNewStock"]</a>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" asp-area="" asp-controller="Home" asp-action="Sales"><i class="fa-solid fa-bell sidebar-icon"></i>Notifications</a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" asp-area="" asp-controller="Reviews" asp-action="Index"><i class="fa-solid fa-comments sidebar-icon"></i>Reviews</a>
+                        <a class="sidebar-link" asp-area="" asp-controller="Reviews" asp-action="Index"><i class="fa-solid fa-comments sidebar-icon"></i>@Localizer["Reviews"]</a>
                     </li>
                     
                 </ul>
-                <a class="sidebar-help-link" asp-area="" asp-controller="Home" asp-action="Help">Need help?</a>
+                <div class="sidebar-bottom-row">
+                    <a class="sidebar-help-link" asp-area="" asp-controller="Home" asp-action="Help">@Localizer["Help"]</a>
+                    <partial name="_ToggleLanguage" />
+
+                </div>
+
                 <div id="sidebar-login-partial">
                     <partial name="_LoginPartial" />
 
@@ -52,14 +62,13 @@
             <div class="content">
                 <header>
                     <form class="search-container">
-                        <input class="search" placeholder="Search here...."/>
+                        <input class="search" placeholder="Search here...." />
                         <button class="search-button" type="submit"><i class="fa-solid fa-magnifying-glass sidebar-icon"></i></button>
-
-                        <a href="javascript:void(0);" id="hamburger-icon" class="icon" onclick="toggleSidebar()">
-                            <i class="fa fa-bars"></i>
-                        </a>
                     </form>
                     <partial name="_LoginPartial" />
+                    <a href="javascript:void(0);" id="hamburger-icon" class="icon" onclick="toggleSidebar()">
+                        <i class="fa fa-bars"></i>
+                    </a>
                 </header>
                 <div class="page-container">
                     @RenderBody()

@@ -18,15 +18,18 @@ namespace Market.Services.Authentication
         {
             factory = httpClientFactory;
             client = factory.CreateClient();
-            client.BaseAddress = new Uri("https://farmers-market.sommee.com/api/");
+            client.BaseAddress = new Uri("https://farmers-api.runasp.net/api/");
             this.httpContextAccessor = httpContextAccessor;
         }
 
-        public async Task SignInAsync(string userdata)
+        public async Task Logout() => await httpContextAccessor.HttpContext.SignOutAsync();
+
+        public async Task SignInAsync(string userdata, string role)
         {
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.UserData, userdata),
+                new Claim(ClaimTypes.Role, role),
             };
 
             var claimsIdentity = new ClaimsIdentity(
@@ -35,7 +38,7 @@ namespace Market.Services.Authentication
             var authProperties = new AuthenticationProperties
             {
                 AllowRefresh = true,
-                ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(15),
+                ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(30),
                 IsPersistent = true,
                 IssuedUtc = DateTimeOffset.UtcNow,
             };

@@ -8,8 +8,9 @@ namespace Market.Services
         public Task<User> Login(string email, string password);
         public Task<HttpStatusCode> Register(User user);
         public Task RemoveOrderAsync(int orderId);
+        public Task DeclineOrderAsync(int orderId);
         public User GetUser();
-        void AddApprovedOrder(int id);
-        void AddDeliveredOrder(int id);
+        Task AddApprovedOrderAsync(int id);
+        Task AddDeliveredOrder(int id);
     }
 }

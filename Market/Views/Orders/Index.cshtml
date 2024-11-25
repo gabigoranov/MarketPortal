@@ -14,15 +14,19 @@
         <p>Please decide whether you can accept these orders.</p>
         <hr />
         <br />
-        <div class="orders gapped">
-            @foreach (Order order in Model.Where(x => x.IsApproved == false).Reverse().ToList())
+        <div class="orders gapped scrollable" style="height: 80%;">
+            @foreach (Order order in Model.Where(x => x.IsAccepted == false && x.IsDenied == false).Reverse().ToList())
             {
                 <partial name="_OrderPartial" model="@order" />
+            }
+            @foreach (Order order in Model.Where(x => x.IsDenied == true).Reverse().ToList())
+            {
+                <partial name="_DeniedOrderPartial" model="@order" />
             }
         </div>
     </div>
     <div class="money">
-        You have an income of ??? in the past month.
+        <canvas id="incomeChart"></canvas>
     </div>
     <div class="accepted">
         <h2>
@@ -30,8 +34,8 @@
         </h2>
         <hr />
         <br />
-        <div class="gapped">
-            @foreach (Order order in Model.Where(x => x.IsApproved == true).Reverse().ToList())
+        <div class="gapped scrollable" style="height: 92%;">
+            @foreach (Order order in Model.Where(x => x.IsAccepted == true).Reverse().ToList())
             {
                 <partial name="_AcceptedOrderPartial" model="@order" />
             }
@@ -42,3 +46,29 @@
 
 
 
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var ctx = document.getElementById('incomeChart').getContext('2d');
+        var totalIncome = @Html.Raw(Json.Serialize(Model.Where(x => x.IsAccepted).Select(m => m.Price).Sum().ToString()));
+        var incomeChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: @Html.Raw(Json.Serialize(Model.Where(x => x.IsAccepted).Select(m => m.DateOrdered.ToString("yyyy-MM-dd")))),
+                datasets: [{
+                    label: `Orders, Income: ${totalIncome}`,
+                    data: @Html.Raw(Json.Serialize(Model.Where(x => x.IsAccepted).Select(m => m.Price))),
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    x: { display: true },
+                    y: { display: true }
+                }
+            }
+        });
+    </script>
+}

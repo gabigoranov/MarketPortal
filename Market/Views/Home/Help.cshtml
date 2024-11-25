@@ -2,4 +2,98 @@
     ViewData["Title"] = "Help";
 }
 
-The app is under development and will soon receive a detailed guide on how to take full advantage of it's functions. In the mean time please report any bugs/errors or annoying functions you encounter. Thank you!
+
+<style>
+    .help-container {
+        margin: auto;
+        height: 100%;
+        text-align: center;
+        overflow: scroll;
+    }
+
+
+    .help-section {
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center; /* Center all text in sections */
+    }
+
+    .help-overview {
+        margin-bottom: 20px;
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin: 12px 0px;
+    }
+
+    .help-overview a {
+        display: block;
+        margin: 5px 0;
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .help-overview a:hover {
+        text-decoration: underline;
+    }
+
+    img {
+        width: 100%; /* Adjust the size as needed */
+        height: auto;
+        margin: 10px 0;
+    }
+</style>
+
+<div class="help-container">
+    <h1>Help Section</h1>
+
+    <div class="help-overview">
+        <a href="#dashboard">Dashboard</a>
+        <a href="#orders">Orders</a>
+        <a href="#offers">Offers</a>
+        <a href="#stocks">Stocks</a>
+        <a href="#history">History</a>
+        <a href="#reviews">Reviews</a>
+    </div>
+
+    <div class="help-section" id="dashboard">
+        <h2>Dashboard</h2>
+        <img src="~/Images/overview.png" alt="Dashboard Image">
+        <p>The Dashboard provides an overview of your activities and metrics. Here, you can see your recent performance, quick links to important sections, and personalized tips.</p>
+    </div>
+
+    <div class="help-section" id="orders">
+        <h2>Orders</h2>
+        <img src="~/Images/orders.png" alt="Orders Image">
+        <p>In the Orders section, you can view and manage all your orders. Track the status of your orders, view order details, and initiate returns or refunds if necessary.</p>
+    </div>
+
+    <div class="help-section" id="offers">
+        <h2>Offers</h2>
+        <img src="~/Images/offers.png" alt="Offers Image">
+        <p>The Offers page showcases current promotions, discounts, and special deals available to you. Stay updated with the latest offers to maximize your savings.</p>
+    </div>
+
+    <div class="help-section" id="stocks">
+        <h2>Stocks</h2>
+        <img src="~/Images/stocks.png" alt="Stocks Image">
+        <p>Here, you can manage your stock inventory. Monitor stock levels, restock items, and see insights on stock movement and trends to keep your inventory up-to-date.</p>
+    </div>
+
+    <div class="help-section" id="history">
+        <h2>History</h2>
+        <p>Unfinished<p>
+    </div>
+
+    <div class="help-section" id="reviews">
+        <h2>Reviews</h2>
+        <img src="~/Images/reviews.png" alt="Reviews Image">
+        <p>In the Reviews section, you can read and manage customer reviews. Respond to feedback, address concerns, and view ratings to understand customer satisfaction.</p>
+    </div>
+</div>
+

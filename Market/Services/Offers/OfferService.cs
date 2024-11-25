@@ -26,7 +26,7 @@ namespace Market.Services.Offers
         public async Task AddOfferAsync(Guid sellerId, OfferViewModel offer)
         {
             var jsonParsed = JsonSerializer.Serialize<OfferViewModel>(offer, new JsonSerializerOptions() { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
-            var url = $"https://farmers-market.somee.com/api/offers/add";
+            var url = $"https://farmers-api.runasp.net/api/offers/add";
             HttpContent content = new StringContent(jsonParsed.ToString(), Encoding.UTF8, "application/json");
 
             var response = await client.PostAsync(url, content);
@@ -51,7 +51,7 @@ namespace Market.Services.Offers
 
         public async Task EditAsync(OfferViewModel model)
         {
-            string url = "https://farmers-market.somee.com/api/offers/edit/";
+            string url = "https://farmers-api.runasp.net/api/offers/edit/";
             var jsonParsed = JsonSerializer.Serialize<OfferViewModel>(model, new JsonSerializerOptions() { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
             HttpContent content = new StringContent(jsonParsed.ToString(), Encoding.UTF8, "application/json");
             var response = await client.PostAsync(url, content);
@@ -59,19 +59,37 @@ namespace Market.Services.Offers
 
         public async Task<Offer> GetByIdAsync(int id)
         {
-            string url = "https://farmers-market.somee.com/api/offers/getall/";
+            string url = "https://farmers-api.runasp.net/api/offers/getall/";
             var response = await client.GetAsync(url);
             List<Offer> res = new List<Offer>();
             if (response.IsSuccessStatusCode)
             {
                 var stringResponse = await response.Content.ReadAsStringAsync();
-                res = JsonSerializer.Deserialize<List<Offer>>(stringResponse, new JsonSerializerOptions() { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
+                res = JsonSerializer.Deserialize<List<Offer>>(stringResponse, new JsonSerializerOptions() { PropertyNamingPolicy = JsonNamingPolicy.CamelCase })!;
             }
             else
             {
                 throw new HttpRequestException(response.ReasonPhrase);
             }
             return res.First(x => x.Id == id);
+        }
+
+        public async Task<List<Offer>> GetDiscoverOffers()
+        {
+            string url = "https://farmers-api.runasp.net/api/offers/getall/";
+            var response = await client.GetAsync(url);
+            List<Offer> res;
+            if (response.IsSuccessStatusCode)
+            {
+                var stringResponse = await response.Content.ReadAsStringAsync();
+                res = JsonSerializer.Deserialize<List<Offer>>(stringResponse, new JsonSerializerOptions() { PropertyNamingPolicy = JsonNamingPolicy.CamelCase })!;
+            }
+            else
+            {
+                throw new HttpRequestException(response.ReasonPhrase);
+            }
+            return res;
+
         }
 
         public async Task<OfferViewModel> GetForEditByIdAsync(int offerId)
@@ -85,7 +103,7 @@ namespace Market.Services.Offers
 
         public async Task<List<Offer>> GetSellerOffersAsync(Guid sellerId)
         {
-            string url = "https://farmers-market.somee.com/api/offers/getall/";
+            string url = "https://farmers-api.runasp.net/api/offers/getall/";
             var response = await client.GetAsync(url);
             List<Offer> result = new List<Offer>();
             if (response.IsSuccessStatusCode)
@@ -102,7 +120,7 @@ namespace Market.Services.Offers
 
         public async Task RemoveOfferAsync(int offerId)
         {
-            string url = $"https://farmers-market.somee.com/api/offers/delete?id={offerId}";
+            string url = $"https://farmers-api.runasp.net/api/offers/delete?id={offerId}";
             var response = await client.DeleteAsync(url);
         }
     }

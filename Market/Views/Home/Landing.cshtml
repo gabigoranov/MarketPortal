@@ -34,8 +34,8 @@
                 <p>@Localizer["HeroText"]</p>
                 <br />
                 <div class="flex-container">
-                    <a class="action-button">@Localizer["Download"]</a>
-                    <a class="empty-button">@Localizer["SellNow"]</a>
+                    <a href="~/app-release.apk" class="action-button" download="">@Localizer["Download"]</a>
+                    <a asp-action="Register" asp-controller="User" class="empty-button">@Localizer["SellNow"]</a>
                 </div>
             </div>
             <img class="image" width="400px" height="600px" src="~/Images/landing-hero.jpg" />
@@ -97,8 +97,8 @@
                     <div class="cta-container">
                         <h2>@Localizer["AUR"]</h2>
                         <div class="flex-container">
-                            <a class="action-button">@Localizer["Download"]</a>
-                            <a class="empty-button">@Localizer["SellNow"]</a>
+                            <a href="~/app-release.apk" class="action-button" download>@Localizer["Download"]</a>
+                            <a asp-action="Register" asp-controller="User" class="empty-button">@Localizer["SellNow"]</a>
                         </div>
                     </div>
                 </div>
@@ -170,6 +170,12 @@
                 <li>Email: <a href="mailto:gabigoranov@abv.bg">gabigoranov@abv.bg</a></li>
                 <li>Phone: <a href="tel:+359 89 658 3578">+359 89 658 3578</a></li>
             </ul>
+            <h4><i class="fa-brands fa-github"></i> Source Code</h4>
+            <div class="footer-github">
+                <a href="https://github.com/gabigoranov/MarketAPI">API</a>
+                <a href="https://github.com/gabigoranov/MarketPortal">Website</a>
+                <a href="https://github.com/gabigoranov/MarketFlutter">Mobile</a>
+            </div>
         </div>
 
         <div class="footer-section">

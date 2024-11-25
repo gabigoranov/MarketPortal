@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using NuGet.Protocol.Plugins;
 
 namespace Market.Data.Models
 {
@@ -11,7 +12,10 @@ namespace Market.Data.Models
         public string Title { get; set; }
 
         [Required]
-        public bool IsApproved { get; set; }
+        public bool IsAccepted { get; set; }
+
+        [Required]
+        public bool IsDenied { get; set; }
 
         [Required]
         public double Quantity { get; set; }
@@ -19,6 +23,8 @@ namespace Market.Data.Models
         public double Price { get; set; }
         [Required]
         public string Address { get; set; }
+
+        public bool IsDelivered { get; set; } = false;
 
         [Required]
         [ForeignKey(nameof(Offer))]
@@ -31,10 +37,12 @@ namespace Market.Data.Models
         public Guid? SellerId { get; set; }
         public User Seller { get; set; }
 
-        public bool IsDelivered { get; set; } = false;
-        public DateTime? DeliveredDate { get; set; } = null;
-
         [Required]
         public DateTime DateOrdered { get; set; }
+
+        public DateTime? DateDelivered { get; set; } = null;
+
+        [Required]
+        public int OfferTypeId { get; set; }
     }
 }

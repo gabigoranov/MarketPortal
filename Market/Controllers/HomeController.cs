@@ -1,6 +1,10 @@
 using Market.Data.Models;
 using Market.Models;
 using Market.Services;
+using Market.Services.Authentication;
+using Market.Services.Inventory;
+using Market.Services.Reviews;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -12,14 +16,26 @@ namespace Market.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IReviewsService _reviewsService;
+        private readonly IAuthenticationService _authService;
+        private readonly IInventoryService _inventoryServive;
         private readonly IUserService _userService;
         private User _user;
 
-        public HomeController(ILogger<HomeController> logger, IUserService userService)
+        public HomeController(ILogger<HomeController> logger, IUserService userService, IAuthenticationService authService, IInventoryService inventoryServive, IReviewsService reviewsService)
         {
             _logger = logger;
             _userService = userService;
             _user = _userService.GetUser();
+            _authService = authService;
+            _inventoryServive = inventoryServive;
+            _reviewsService = reviewsService;
+        }
+
+        [Authorize]
+        public IActionResult DownloadFile()
+        { 
+            return Redirect("https://drive.google.com/file/d/1wuDesdIoVtEOSpWBV3y5na3nJxreqGaQ/view?usp=drive_link");
         }
 
         [HttpPost]
@@ -28,40 +44,22 @@ namespace Market.Controllers
             Response.Cookies.Append(
                 CookieRequestCultureProvider.DefaultCookieName,
                 CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
-                new CookieOptions { Expires = DateTimeOffset.UtcNow.AddMinutes(2) } //increase time
+                new CookieOptions { Expires = DateTimeOffset.UtcNow.AddMinutes(30) } 
             );
 
             return LocalRedirect(returnUrl);
         }
 
-        public IActionResult Index()
+        [HttpGet]
+        public async Task<IActionResult> Index()
         {
-            //try to log in with cookies
-            string? email = HttpContext.Request.Cookies["Email"];
-            string? password = HttpContext.Request.Cookies["Password"];
-            System.Diagnostics.Debug.WriteLine(email);
-
-            if (email != null && password != null)
-            {
-                UserViewModel model = new UserViewModel()
-                {
-                    Email = email,
-                    Password = password,
-                };
-                return RedirectToAction("Login", "User", model);
-            }
             if (_user != null)
             {
-                return View();
+                List<Stock> stocks = await _inventoryServive.GetSellerStocksAsync();
+
+                return View(new OverviewViewModel(_user.SoldOrders.ToList(), _reviewsService.GetAllReviewsAsync(), stocks));
             }
             return RedirectToAction("Landing");
-
-        }
-
-        public IActionResult Sales()
-        {
-            System.Diagnostics.Debug.WriteLine(_user.Email);
-            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

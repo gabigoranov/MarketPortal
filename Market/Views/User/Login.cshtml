@@ -4,14 +4,23 @@
     ViewData["Title"] = "Login";
 }
 
-<form class="login-form" asp-action="Login" method="post">
-    <div>
-        <input asp-for="@Model.Email" autocomplete="email" placeholder="Email" aria-required="true" />
-        <span asp-validation-for="@Model.Email" class="text-danger"></span>
+<div class="split-screen">
+    <div class="left-panel">
+        <form class="login-form" asp-controller="User" asp-action="Login" method="post">
+            <h2>Login</h2>
+            <div>
+                <input asp-for="@Model.Email" autocomplete="email" placeholder="Email" aria-required="true" />
+                <span asp-validation-for="@Model.Email" class="text-danger"></span>
+            </div>
+            <div>
+                <input asp-for="@Model.Password" autocomplete="password" placeholder="Password" aria-required="true" />
+                <span asp-validation-for="@Model.Password" class="text-danger"></span>
+            </div>
+            <button class="custom-file-upload" type="submit">Login</button>
+        </form>
     </div>
-    <div>
-        <input asp-for="@Model.Password" autocomplete="password" placeholder="Password" aria-required="true" />
-        <span asp-validation-for="@Model.Password" class="text-danger"></span>
+
+    <div class="right-panel">
+        <img src="https://wallpapers.com/images/hd/nature-landscape-pictures-2afqivuu88pnqblo.jpg" alt="A visually engaging login image" />
     </div>
-    <button type="submit">Login</button>
-</form>
+</div>

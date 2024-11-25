@@ -6,5 +6,6 @@ namespace Market.Services.Reviews
     {
         public List<Review> GetAllReviewsAsync();
         public List<Review> GetOfferReviewsAsync(int offerId);
+        Task RemoveReviewAsync(int id);
     }
 }

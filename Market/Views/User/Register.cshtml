@@ -46,7 +46,8 @@
         <input asp-for="User.Password" placeholder="Password" aria-required="true" />
         <span asp-validation-for="User.Password" class="text-danger"></span>
     </div>
-    <button type="submit">Submit</button>
+    <button class="custom-file-upload" type="submit">Submit</button>
+    <a asp-action="RegisterOrganization" asp-controller="User">Are you an organization or company?</a>
 </form>
 
 <script>

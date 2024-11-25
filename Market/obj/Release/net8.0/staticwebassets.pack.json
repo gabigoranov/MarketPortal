@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\Market.bundle.scp.css"
     },
     {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\globe-solid.svg",
+      "PackagePath": "staticwebassets\\Images\\globe-solid.svg"
+    },
+    {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\globe.png",
+      "PackagePath": "staticwebassets\\Images\\globe.png"
+    },
+    {
       "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\image-display-alt.png",
       "PackagePath": "staticwebassets\\Images\\image-display-alt.png"
     },
@@ -13,8 +21,36 @@
       "PackagePath": "staticwebassets\\Images\\landing-hero.jpg"
     },
     {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\offers.png",
+      "PackagePath": "staticwebassets\\Images\\offers.png"
+    },
+    {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\orders.png",
+      "PackagePath": "staticwebassets\\Images\\orders.png"
+    },
+    {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\overview.png",
+      "PackagePath": "staticwebassets\\Images\\overview.png"
+    },
+    {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\reviews.png",
+      "PackagePath": "staticwebassets\\Images\\reviews.png"
+    },
+    {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\stocks.png",
+      "PackagePath": "staticwebassets\\Images\\stocks.png"
+    },
+    {
       "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\why-us.jpg",
       "PackagePath": "staticwebassets\\Images\\why-us.jpg"
+    },
+    {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\app-release.apk",
+      "PackagePath": "staticwebassets\\app-release.apk"
+    },
+    {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\app-release.apk.sha1",
+      "PackagePath": "staticwebassets\\app-release.apk.sha1"
     },
     {
       "Id": "E:\\Projects\\Market\\Market\\wwwroot\\css\\landing.css",
@@ -263,6 +299,10 @@
     {
       "Id": "E:\\Projects\\Market\\Market\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\manifest.json",
+      "PackagePath": "staticwebassets\\manifest.json"
     },
     {
       "Id": "E:\\Projects\\Market\\Market\\wwwroot\\profile.jpg",
