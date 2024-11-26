@@ -10,7 +10,6 @@ using System.IO;
 using System.Text.Json;
 using Market.Services.Authentication;
 using Microsoft.AspNetCore.Authorization;
-
 namespace Market.Controllers
 {
     public class UserController : Controller

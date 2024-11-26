@@ -1,4 +1,50 @@
 ﻿@using Market.Data.Models
 @model Offer
+
 @{
+    ViewData["Title"] = "Description";
+    int quantity = 10;
 }
+
+<section class="offer-section">
+    <div class="offer-container">
+        <img class="image-display" src="~/offer.jpg" alt="current offer image" />
+        <div class="offer-data-container">
+            <h1>
+                @(Model.Title)
+                <span class="offer-item__rating">
+                    @for (int i = 0; i < 5; i++)
+                    {
+                        <i class="offer-item__rating-star @(Model.AvgRating >= i + 1 ? "fas fa-star" : "far fa-star")"></i>
+                    }
+                </span>
+            </h1>
+            <hr />
+            <div class="offer-date__undertitle">
+                <h3>
+                    <i class="fa-solid fa-location-dot"></i>
+                    @Model.Town
+                </h3>
+                <h3>
+                    @(Model.PricePerKG) BGN/KG
+                    <i class="fa-solid fa-tag"></i>
+                </h3>
+            </div>
+
+            <p class="offer-description">@Model.Description</p>
+
+            <form asp-action="add" asp-controller="Cart">
+                <input type="hidden" name="Id" value="@Model.Id" />
+                <input type="hidden" name="OwnerId" value="@Model.OwnerId" />
+                <input type="hidden" name="PricePerKG" value="@Model.PricePerKG" />
+                <input type="hidden" name="Title" value="@Model.Title" />
+                <input type="hidden" name="quantity" value="@quantity" />
+                <button type="submit">Add To Cart</button>
+            </form>
+
+        </div>
+    </div>
+</section>
+
+
+

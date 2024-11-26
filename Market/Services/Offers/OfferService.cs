@@ -30,7 +30,6 @@ namespace Market.Services.Offers
             HttpContent content = new StringContent(jsonParsed.ToString(), Encoding.UTF8, "application/json");
 
             var response = await client.PostAsync(url, content);
-            Console.WriteLine(response.StatusCode);
         }
 
         public OfferViewModel ConvertOfferToViewModel(Offer offer)
@@ -59,19 +58,19 @@ namespace Market.Services.Offers
 
         public async Task<Offer> GetByIdAsync(int id)
         {
-            string url = "https://farmers-api.runasp.net/api/offers/getall/";
+            string url = $"https://farmers-api.runasp.net/api/offers/single?id={id}";
             var response = await client.GetAsync(url);
-            List<Offer> res = new List<Offer>();
+            Offer res = new Offer();
             if (response.IsSuccessStatusCode)
             {
                 var stringResponse = await response.Content.ReadAsStringAsync();
-                res = JsonSerializer.Deserialize<List<Offer>>(stringResponse, new JsonSerializerOptions() { PropertyNamingPolicy = JsonNamingPolicy.CamelCase })!;
+                res = JsonSerializer.Deserialize<Offer>(stringResponse, new JsonSerializerOptions() { PropertyNamingPolicy = JsonNamingPolicy.CamelCase })!;
             }
             else
             {
                 throw new HttpRequestException(response.ReasonPhrase);
             }
-            return res.First(x => x.Id == id);
+            return res;
         }
 
         public async Task<List<Offer>> GetDiscoverOffers()

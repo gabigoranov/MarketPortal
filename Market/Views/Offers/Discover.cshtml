@@ -1,0 +1,57 @@
+﻿@using Market.Data.Models
+@model List<Offer>
+@{
+    ViewData["Title"] = "Discover";
+}
+
+<h1>Discover some new offers from local farmers for your business:</h1>
+
+<div class="discover-categories">
+    <div class="category vegetables" category="Vegetables" >
+        <h2>Vegetables</h2>
+    </div>
+    <div class="category fruits" category="Fruits">
+        <h2>Fruits</h2>
+    </div>
+    <div class="category dairy" category="Dairy">
+        <h2>Dairy</h2>
+    </div>
+    <div class="category meat" category="Meat">
+        <h2>Meat</h2>
+    </div>
+</div>
+
+<div class="gapped" id="discover-offers">
+    @foreach (Offer offer in Model) {
+        <div class="offer" category="@offer.Stock.OfferType.Category">
+            <partial class="discover-offer-partial" name="_DiscoverOfferPartial" model="@offer" />
+        </div>
+    }
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const categories = document.querySelectorAll('.category');
+
+        const offers = document.querySelectorAll('.offer');
+
+        categories.forEach(function (category) {
+            category.addEventListener('click', function () {
+                const selectedCategory = category.getAttribute('category');
+
+                offers.forEach(function (offer) {
+                    const offerCategory = offer.getAttribute('category');
+
+                    if (selectedCategory === "All" || selectedCategory === offerCategory) {
+                        offer.style.display = 'block'; // Show the offer
+                    } else {
+                        offer.style.display = 'none';  // Hide the offer
+                    }
+                });
+            });
+        });
+    });
+</script>
+
+

@@ -293,5 +293,3 @@ E:\Projects\Market\Market\obj\Debug\net8.0\Market.Resources.Views.Shared._Layout
 E:\Projects\Market\Market\obj\Debug\net8.0\Market.Resources.Views.Shared._Layout.en.resources
 E:\Projects\Market\Market\obj\Debug\net8.0\bg\Market.resources.dll
 E:\Projects\Market\Market\obj\Debug\net8.0\en\Market.resources.dll
-E:\Projects\Market\Market\obj\Debug\net8.0\bg\Market.resources.cs
-E:\Projects\Market\Market\obj\Debug\net8.0\en\Market.resources.cs

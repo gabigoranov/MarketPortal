@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.AspNetCore.Localization;
 using System.Globalization;
 using Microsoft.Extensions.Options;
+using Market.Services.Cart;
 
 var cookiePolicyOptions = new CookiePolicyOptions
 {
@@ -63,6 +64,7 @@ builder.Services.AddScoped<IOfferService, OfferService>();
 builder.Services.AddScoped<IFirebaseServive, FirebaseService>();
 builder.Services.AddScoped<IOrdersService, OrdersService>();
 builder.Services.AddScoped<IReviewsService, ReviewsService>();
+builder.Services.AddScoped<ICartService, CartService>();
 
 var app = builder.Build();
 var locOptions = app.Services.GetService<IOptions<RequestLocalizationOptions>>();
@@ -89,6 +91,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Landing}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

@@ -382,6 +382,9 @@ input {
 
 .image-display{
     border-radius: 20px;
+    max-width:  800px;
+    max-height: 800px;
+    object-fit: contain;
 }
 
 .profile-description{
@@ -625,6 +628,50 @@ i{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+/*Offer Description*/
+.offer-section{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.offer-container{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.offer-data-container h1 {
+    font-size: 42px;
+}
+
+.offer-data-container h3, .offer-data-container h3 i {
+    font-size: var(--font-mid);
+}
+
+.offer-data-container .offer-item__rating-star{
+    font-size: var(--font-large);
+}
+
+.offer-date__undertitle{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+hr{
+    margin-top: 12px;
+    margin-bottom: 32px;
+}
+
+.offer-description{
+    margin: 22px 0px;
 }
 
 /* General Split-Screen Layout */

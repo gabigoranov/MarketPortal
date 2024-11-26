@@ -1,0 +1,12 @@
+{
+  "name": "Market",
+  "short_name": "Market",
+  "description": "The place from where you can order fresh groceries.",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type":  "image/png"
+    }
+  ]
+}

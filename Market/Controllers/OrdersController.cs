@@ -43,7 +43,7 @@ namespace Market.Controllers
             {
                 role = "Organization";
             }
-            await _authService.SignInAsync(JsonSerializer.Serialize<User>(user), role);
+            await _authService.UpdateUserData(JsonSerializer.Serialize<User>(user));
 
             return View(user.SoldOrders.ToList());
         }

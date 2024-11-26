@@ -1,0 +1,10 @@
+﻿@using Market.Data.Models
+@model Order
+
+<div class="offer-partial-container denied">
+    <div>
+        <h2>@(Model.Offer.Title + " | " + Model.Address)</h2>
+        <p>@(Model.Price + "BGN, " + Model.Quantity + "KG")</p>
+    </div>
+
+</div>

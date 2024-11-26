@@ -81,14 +81,6 @@
       "PackagePath": "staticwebassets\\Images\\categories\\vegetables.jpg"
     },
     {
-      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\globe-solid.svg",
-      "PackagePath": "staticwebassets\\Images\\globe-solid.svg"
-    },
-    {
-      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\globe.png",
-      "PackagePath": "staticwebassets\\Images\\globe.png"
-    },
-    {
       "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\image-display-alt.png",
       "PackagePath": "staticwebassets\\Images\\image-display-alt.png"
     },
@@ -379,6 +371,10 @@
     {
       "Id": "E:\\Projects\\Market\\Market\\wwwroot\\manifest.json",
       "PackagePath": "staticwebassets\\manifest.json"
+    },
+    {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\offer.jpg",
+      "PackagePath": "staticwebassets\\offer.jpg"
     },
     {
       "Id": "E:\\Projects\\Market\\Market\\wwwroot\\profile.jpg",

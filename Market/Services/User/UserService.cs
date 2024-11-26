@@ -94,12 +94,7 @@ namespace Market.Services
             User = JsonSerializer.Deserialize<User>(claim);
 
             User.SoldOrders.Single(x => x.Id == id).IsAccepted = true;
-            string role = "Seller";
-            if (User.Discriminator == 2)
-            {
-                role = "Organization";
-            }
-            await authService.SignInAsync(JsonSerializer.Serialize<User>(User), role);
+            await authService.UpdateUserData(JsonSerializer.Serialize<User>(User));
         }
 
         public async Task AddDeliveredOrder(int id)
@@ -108,12 +103,7 @@ namespace Market.Services
             User = JsonSerializer.Deserialize<User>(claim);
             
             User.SoldOrders.Single(x => x.Id == id).IsDelivered = true;
-            string role = "Seller";
-            if (User.Discriminator == 2)
-            {
-                role = "Organization";
-            }
-            await authService.SignInAsync(JsonSerializer.Serialize<User>(User), role);
+            await authService.UpdateUserData(JsonSerializer.Serialize<User>(User));
 
         }
 

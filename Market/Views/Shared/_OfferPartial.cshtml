@@ -1,0 +1,25 @@
+﻿@using Market.Data.Models
+@model Offer
+@{
+}
+
+<div class="offer-partial-container">
+    <div>
+        <h1>@Model.Title</h1>
+        <p class="offer-partial-description">@Model.Description</p>
+    </div>
+    
+    <div class="offer-partial-form-buttons-container">
+        <form asp-controller="Offers" asp-action="Edit" method="get" asp-route-id="@Model.Id">
+            <button type="submit">
+                <i class="fa-solid fa-pen"></i>
+            </button>
+        </form>
+        <form asp-controller="Offers" asp-action="Delete" method="post" asp-route-id="@Model.Id">
+            <button type="submit">
+                <i class="fa-solid fa-trash"></i>
+            </button>
+        </form>
+    </div>
+    
+</div>

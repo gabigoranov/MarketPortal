@@ -1,0 +1,30 @@
+﻿@using Market.Data.Models
+@model Offer
+
+<a asp-controller="Offers" asp-action="Description" asp-route-id="@Model.Id">
+    <div class="offer-item">
+        <div class="offer-item__container">
+            <div class="container">
+                <div class="offer-item__header">
+                    <img class="offer-item_icon" src="~/Images/Icons/1.svg"></img>
+                    <h3 class="offer-item__title">
+                        <a href="@Url.Action("Description", "Offers", new { id = Model.Id })">@Model.Title</a>
+                        <span class="offer-item__rating">
+                            @for (int i = 0; i < 5; i++)
+                            {
+                                <i class="offer-item__rating-star @(Model.AvgRating >= i + 1 ? "fas fa-star" : "far fa-star")"></i>
+                            }
+                        </span>
+                        <p class="offer-item__description">@Model.Description</p>
+                    </h3>
+                </div>
+            </div>
+
+        </div>
+        <div class="offer-item__details">
+            <p class="offer-item__location">@Model.Town</p>
+            <p class="offer-item__price">@Model.PricePerKG BGN/KG</p>
+        </div>
+    </div>
+</a>
+

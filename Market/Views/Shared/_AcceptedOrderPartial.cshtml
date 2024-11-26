@@ -1,0 +1,22 @@
+﻿@using Market.Data.Models
+@model Order
+
+@{
+    string iconColor = Model.IsDelivered ? "green" : "red";
+}
+
+<div class="offer-partial-container">
+    <div>
+        <h2>@(Model.Offer.Title + " | " + Model.Address)</h2>
+        <p>@(Model.Price + "BGN, " + Model.Quantity + "KG")</p>
+    </div>
+
+    <div class="offer-partial-form-buttons-container">
+        <form asp-controller="Orders" asp-action="Deliver" method="get" asp-route-id="@Model.Id">
+            <button type="submit">
+                <i style="color: @iconColor" class="fa-solid fa-truck"></i>
+            </button>
+        </form>
+    </div>
+
+</div>

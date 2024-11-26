@@ -1,0 +1,14 @@
+﻿@using Market.Data.Models
+@model Review
+
+<div class="offer-partial-container">
+    <div class="review">
+        <h2>@(Model.FirstName + " " + Model.Rating.ToString() + " ★")</h2>
+        <p class="review-description">@Model.Description</p>
+    </div>
+    <form asp-controller="Reviews" asp-action="Delete" method="post" asp-route-id="@Model.Id">
+        <button type="submit">
+            <i class="fa-solid fa-trash"></i>
+        </button>
+    </form>
+</div>

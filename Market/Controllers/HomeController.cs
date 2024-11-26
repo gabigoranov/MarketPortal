@@ -55,9 +55,17 @@ namespace Market.Controllers
         {
             if (_user != null)
             {
-                List<Stock> stocks = await _inventoryServive.GetSellerStocksAsync();
+                if(User.IsInRole("Seller"))
+                {
+                    List<Stock> stocks = await _inventoryServive.GetSellerStocksAsync();
 
-                return View(new OverviewViewModel(_user.SoldOrders.ToList(), _reviewsService.GetAllReviewsAsync(), stocks));
+                    return View(new OverviewViewModel(_user.SoldOrders.ToList(), _reviewsService.GetAllReviewsAsync(), stocks));
+                }
+                else if (User.IsInRole("Organization"))
+                {
+                    return RedirectToAction("Discover", "Offers");
+                }
+                
             }
             return RedirectToAction("Landing");
         }

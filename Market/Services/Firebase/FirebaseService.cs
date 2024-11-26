@@ -1,10 +1,8 @@
 ﻿
 using Firebase.Auth;
 using Firebase.Storage;
-using Microsoft.AspNetCore.DataProtection.KeyManagement;
-using static System.Net.Mime.MediaTypeNames;
-using System.Net.Sockets;
-using System.Net;
+using System.Drawing.Imaging;
+using System.Drawing;
 
 namespace Market.Services.Firebase
 {
@@ -34,6 +32,22 @@ namespace Market.Services.Firebase
         public async Task DeleteFileAsync(string folderName, string fileName)
         {
             await storage.Child(folderName).Child(fileName).DeleteAsync();
+        }
+
+        public void SaveFile(IFormFile file, string name)
+        {
+            using (var inputStream = file.OpenReadStream())
+            {
+                using (var image = Image.FromStream(inputStream))
+                {
+                    using (var outputStream = new MemoryStream())
+                    {
+                        image.Save(outputStream, ImageFormat.Jpeg);
+
+                        System.IO.File.WriteAllBytes(Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot\", name), outputStream.ToArray());
+                    }
+                }
+            }
         }
 
         public async Task UploadFileAsync(IFormFile file, string folderName, string fileName)

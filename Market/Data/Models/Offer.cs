@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.IdentityModel.Tokens;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Market.Data.Models
@@ -20,7 +21,7 @@ namespace Market.Data.Models
         [StringLength(300)]
         public string Description { get; set; }
 
-        public double AvgRating => Reviews.Count > 0 ? Math.Round(Reviews.Select(x => x.Rating).Average(), 2) : 0;
+        public double AvgRating => !Reviews.IsNullOrEmpty() ? Math.Round(Reviews.Select(x => x.Rating).Average(), 2) : 0;
         
 
         [Required]

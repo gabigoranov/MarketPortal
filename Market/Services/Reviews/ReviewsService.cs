@@ -42,12 +42,7 @@ namespace Market.Services.Reviews
         {
             string url = $"https://farmers-api.runasp.net/api/reviews/delete?id={id}";
             user.Offers.Single(x => x.Reviews.Any(x => x.Id == id)).Reviews.Remove(user.Offers.Single(x => x.Reviews.Any(x => x.Id == id)).Reviews.Single(x => x.Id == id));
-            string role = "Seller";
-            if (user.Discriminator == 2)
-            {
-                role = "Organization";
-            }
-            await _authenticationService.SignInAsync(JsonSerializer.Serialize<User>(user), role);
+            await _authenticationService.UpdateUserData(JsonSerializer.Serialize<User>(user));
             var response = await client.DeleteAsync(url);
         }
     }
