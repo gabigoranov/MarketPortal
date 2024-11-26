@@ -31,11 +31,8 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-
         const categories = document.querySelectorAll('.category');
-
         const offers = document.querySelectorAll('.offer');
-
         categories.forEach(function (category) {
             category.addEventListener('click', function () {
                 const selectedCategory = category.getAttribute('category');

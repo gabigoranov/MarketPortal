@@ -29,6 +29,7 @@ namespace Market.Services.Authentication
             {
                 new Claim(ClaimTypes.UserData, userdata),
                 new Claim(ClaimTypes.Role, role),
+                new Claim("Cart", JsonConvert.SerializeObject(new Purchase())),
             };
 
             var claimsIdentity = new ClaimsIdentity(
@@ -37,7 +38,7 @@ namespace Market.Services.Authentication
             var authProperties = new AuthenticationProperties
             {
                 AllowRefresh = true,
-                ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(30),
+                ExpiresUtc = DateTimeOffset.UtcNow.AddDays(7),
                 IsPersistent = true,
                 IssuedUtc = DateTimeOffset.UtcNow,
             };
@@ -71,7 +72,7 @@ namespace Market.Services.Authentication
             var authProperties = new AuthenticationProperties
             {
                 AllowRefresh = true,
-                ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(30),
+                ExpiresUtc = DateTimeOffset.UtcNow.AddDays(7),
                 IsPersistent = true,
                 IssuedUtc = DateTimeOffset.UtcNow,
             };
@@ -101,7 +102,7 @@ namespace Market.Services.Authentication
             var authProperties = new AuthenticationProperties
             {
                 AllowRefresh = true,
-                ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(30),
+                ExpiresUtc = DateTimeOffset.UtcNow.AddDays(7),
                 IsPersistent = true,
                 IssuedUtc = DateTimeOffset.UtcNow,
             };

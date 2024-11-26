@@ -24,7 +24,7 @@ namespace Market.Controllers
         }
 
         [HttpPost]
-        public IActionResult Add(Offer offer, int quantity)
+        public IActionResult Add(Offer offer, double quantity)
         {
             User user = _userService.GetUser();
             Order order = new Order()
@@ -34,7 +34,7 @@ namespace Market.Controllers
                 BuyerId = user.Id,
                 SellerId = offer.OwnerId,
                 Price = Math.Round(offer.PricePerKG * quantity, 2),
-                Title = $"{user.FirstName} bought {quantity} KG of {offer.Title}"
+                Title = offer.Title
             };
             _cartService.AddOrder(order);
             return RedirectToAction("Index");

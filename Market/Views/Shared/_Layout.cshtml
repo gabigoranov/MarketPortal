@@ -33,10 +33,13 @@
                         <a class="sidebar-link" asp-area="" asp-controller="Orders" asp-action="Index"><i class="fa-solid fa-truck sidebar-icon"></i>@Localizer["Orders"]</a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" asp-area="" asp-controller="Offers" asp-action="Index"><i class="fa-brands fa-buffer sidebar-icon"></i>@(User.IsInRole("Seller") ? @Localizer["Offers"] : @Localizer["Discover"])</a>
+                        <a class="sidebar-link" asp-area="" asp-controller="Offers" asp-action="@(User.IsInRole("Seller") ? "Index" : "Discover")"><i class="fa-brands fa-buffer sidebar-icon"></i>@(User.IsInRole("Seller") ? @Localizer["Offers"] : @Localizer["Discover"])</a>
                     </li>
-                    <hr style="color: #636363" />
+                    @if(User.IsInRole("Seller"))
+                    {
+                        <hr style="color: #636363" />
                     <a class="sidebar-link-mini" asp-area="" asp-controller="Offers" asp-action="AddOffer">@Localizer["AddNewOffer"]</a>
+                    }
                     <li class="sidebar-item">
                         <a class="sidebar-link" asp-area="" asp-controller="Inventory" asp-action="Index"><i class="fa-solid fa-warehouse sidebar-icon"></i>@Localizer["Inventory"]</a>
                     </li>

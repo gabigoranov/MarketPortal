@@ -23,8 +23,8 @@ namespace Market.Services.Cart
         }
         public void AddOrder(Order order)
         {
-            if (_purchase == null) _purchase = GetPurchase();
-            _purchase.Orders.Add(order);
+            GetPurchase();
+            _purchase!.Orders.Add(order);
             _authService.UpdateCart(_purchase);
             
         }
@@ -49,7 +49,10 @@ namespace Market.Services.Cart
             try
             {
                 var claim = httpContextAccessor?.HttpContext?.User?.Claims?.SingleOrDefault(x => x.Type == "Cart")?.Value;
-                if (claim == null) return null;
+                if (claim == null)
+                {
+                    return new Purchase();
+                }
                 _purchase = JsonConvert.DeserializeObject<Purchase>(claim);
             }
             catch (Exception ex)

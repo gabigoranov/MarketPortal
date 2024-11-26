@@ -6,5 +6,18 @@
     ViewData["Title"] = "Cart";
 }
 
-
-<h2>@Model.Orders.Count</h2>
+<div class="black-container">
+    <div class="cart-container">
+        <h1>Cart</h1>
+        <div class="cart-orders-container">
+            @foreach (Order order in Model.Orders)
+            {
+                <div class="cart-order-container">
+                    <h2>
+                        @order.Title
+                    </h2>
+                </div>
+            }
+        </div>
+    </div>
+</div>

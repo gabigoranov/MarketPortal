@@ -8,7 +8,7 @@
                 <div class="offer-item__header">
                     <img class="offer-item_icon" src="~/Images/Icons/1.svg"></img>
                     <h3 class="offer-item__title">
-                        <a href="@Url.Action("Description", "Offers", new { id = Model.Id })">@Model.Title</a>
+                        <span>@Model.Title</span>
                         <span class="offer-item__rating">
                             @for (int i = 0; i < 5; i++)
                             {

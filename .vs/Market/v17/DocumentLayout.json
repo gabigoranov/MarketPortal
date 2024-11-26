@@ -3,16 +3,64 @@
   "WorkspaceRootPath": "E:\\Projects\\Market\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\services\\cart\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\services\\cart\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\views\\shared\\_discoverofferpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\views\\shared\\_discoverofferpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\views\\offers\\description.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\views\\offers\\description.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\services\\authentication\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\services\\authentication\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\services\\cart\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\services\\cart\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\services\\user\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\services\\user\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\controllers\\offerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\controllers\\offerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,24 +71,8 @@
       "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\services\\inventory\\inventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\views\\offers\\description.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\views\\offers\\description.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\data\\models\\offer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\data\\models\\offer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\services\\user\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\services\\user\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\services\\reviews\\reviewsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -59,24 +91,12 @@
       "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\services\\firebase\\firebaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\services\\authentication\\iauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\services\\authentication\\iauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\services\\cart\\icartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\services\\cart\\icartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -87,24 +107,12 @@
       "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\data\\models\\purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\views\\shared\\_discoverofferpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\views\\shared\\_discoverofferpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\controllers\\offerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\controllers\\offerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\views\\shared\\_acceptedorderpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\views\\shared\\_acceptedorderpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -114,15 +122,42 @@
       "DocumentGroups": [
         {
           "DockedWidth": 235,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\Projects\\Market\\Market\\Views\\Cart\\Index.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Cart\\Index.cshtml",
+              "ToolTip": "E:\\Projects\\Market\\Market\\Views\\Cart\\Index.cshtml",
+              "RelativeToolTip": "Market\\Views\\Cart\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-26T08:46:48.29Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\Projects\\Market\\Market\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\Projects\\Market\\Market\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Market\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAACgAAACIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-26T18:30:51.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "HomeController.cs",
               "DocumentMoniker": "E:\\Projects\\Market\\Market\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Market\\Controllers\\HomeController.cs",
@@ -130,25 +165,11 @@
               "RelativeToolTip": "Market\\Controllers\\HomeController.cs",
               "ViewState": "AQIAACkAAAAAAAAAAAA9wD0AAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T08:52:57.651Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T08:52:57.651Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\Projects\\Market\\Market\\Views\\Cart\\Index.cshtml",
-              "RelativeDocumentMoniker": "Market\\Views\\Cart\\Index.cshtml",
-              "ToolTip": "E:\\Projects\\Market\\Market\\Views\\Cart\\Index.cshtml",
-              "RelativeToolTip": "Market\\Views\\Cart\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T08:46:48.29Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 16,
               "Title": "InventoryService.cs",
               "DocumentMoniker": "E:\\Projects\\Market\\Market\\Services\\Inventory\\InventoryService.cs",
               "RelativeDocumentMoniker": "Market\\Services\\Inventory\\InventoryService.cs",
@@ -156,25 +177,24 @@
               "RelativeToolTip": "Market\\Services\\Inventory\\InventoryService.cs",
               "ViewState": "AQIAAB8AAAAAAAAAAAAowAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T08:28:37.672Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T08:28:37.672Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "OrdersController.cs",
               "DocumentMoniker": "E:\\Projects\\Market\\Market\\Controllers\\OrdersController.cs",
               "RelativeDocumentMoniker": "Market\\Controllers\\OrdersController.cs",
               "ToolTip": "E:\\Projects\\Market\\Market\\Controllers\\OrdersController.cs",
               "RelativeToolTip": "Market\\Controllers\\OrdersController.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAwwC0AAABUAAAA",
+              "ViewState": "AQIAACYAAAAAAAAAAAAIwC0AAABUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T08:25:42.043Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "IAuthenticationService.cs",
               "DocumentMoniker": "E:\\Projects\\Market\\Market\\Services\\Authentication\\IAuthenticationService.cs",
               "RelativeDocumentMoniker": "Market\\Services\\Authentication\\IAuthenticationService.cs",
@@ -182,64 +202,63 @@
               "RelativeToolTip": "Market\\Services\\Authentication\\IAuthenticationService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T08:13:24.079Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T08:13:24.079Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "CartController.cs",
               "DocumentMoniker": "E:\\Projects\\Market\\Market\\Controllers\\CartController.cs",
               "RelativeDocumentMoniker": "Market\\Controllers\\CartController.cs",
               "ToolTip": "E:\\Projects\\Market\\Market\\Controllers\\CartController.cs",
               "RelativeToolTip": "Market\\Controllers\\CartController.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAArwBsAAAAIAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAqwBwAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T07:41:42.265Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 6,
               "Title": "_LoginPartial.cshtml",
               "DocumentMoniker": "E:\\Projects\\Market\\Market\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "Market\\Views\\Shared\\_LoginPartial.cshtml",
               "ToolTip": "E:\\Projects\\Market\\Market\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeToolTip": "Market\\Views\\Shared\\_LoginPartial.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAACFAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAgAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-26T07:40:25.574Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "AuthenticationService.cs",
               "DocumentMoniker": "E:\\Projects\\Market\\Market\\Services\\Authentication\\AuthenticationService.cs",
               "RelativeDocumentMoniker": "Market\\Services\\Authentication\\AuthenticationService.cs",
               "ToolTip": "E:\\Projects\\Market\\Market\\Services\\Authentication\\AuthenticationService.cs",
               "RelativeToolTip": "Market\\Services\\Authentication\\AuthenticationService.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAgwB8AAAAOAAAA",
+              "ViewState": "AQIAADIAAAAAAAAAAAD4vzkAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T07:33:52.014Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "UserService.cs",
               "DocumentMoniker": "E:\\Projects\\Market\\Market\\Services\\User\\UserService.cs",
               "RelativeDocumentMoniker": "Market\\Services\\User\\UserService.cs",
               "ToolTip": "E:\\Projects\\Market\\Market\\Services\\User\\UserService.cs",
               "RelativeToolTip": "Market\\Services\\User\\UserService.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAmwGAAAAANAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAvwB8AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T07:29:28.628Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 25,
               "Title": "Purchase.cs",
               "DocumentMoniker": "E:\\Projects\\Market\\Market\\Data\\Models\\Purchase.cs",
               "RelativeDocumentMoniker": "Market\\Data\\Models\\Purchase.cs",
@@ -247,25 +266,24 @@
               "RelativeToolTip": "Market\\Data\\Models\\Purchase.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T07:26:20.488Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T07:26:20.488Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
               "Title": "CartService.cs",
               "DocumentMoniker": "E:\\Projects\\Market\\Market\\Services\\Cart\\CartService.cs",
               "RelativeDocumentMoniker": "Market\\Services\\Cart\\CartService.cs",
               "ToolTip": "E:\\Projects\\Market\\Market\\Services\\Cart\\CartService.cs",
               "RelativeToolTip": "Market\\Services\\Cart\\CartService.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwB4AAAAAAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBgAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T07:25:25.354Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 23,
               "Title": "ICartService.cs",
               "DocumentMoniker": "E:\\Projects\\Market\\Market\\Services\\Cart\\ICartService.cs",
               "RelativeDocumentMoniker": "Market\\Services\\Cart\\ICartService.cs",
@@ -273,12 +291,11 @@
               "RelativeToolTip": "Market\\Services\\Cart\\ICartService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T07:25:10.334Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T07:25:10.334Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 21,
               "Title": "FirebaseService.cs",
               "DocumentMoniker": "E:\\Projects\\Market\\Market\\Services\\Firebase\\FirebaseService.cs",
               "RelativeDocumentMoniker": "Market\\Services\\Firebase\\FirebaseService.cs",
@@ -286,12 +303,11 @@
               "RelativeToolTip": "Market\\Services\\Firebase\\FirebaseService.cs",
               "ViewState": "AQIAADQAAAAAAAAAAAA0wDIAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T06:53:24.828Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T06:53:24.828Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 12,
               "Title": "OffersController.cs",
               "DocumentMoniker": "E:\\Projects\\Market\\Market\\Controllers\\OffersController.cs",
               "RelativeDocumentMoniker": "Market\\Controllers\\OffersController.cs",
@@ -301,29 +317,57 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T18:13:06.198Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "site.css",
-              "DocumentMoniker": "E:\\Projects\\Market\\Market\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "Market\\wwwroot\\css\\site.css",
-              "ToolTip": "E:\\Projects\\Market\\Market\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "Market\\wwwroot\\css\\site.css",
-              "ViewState": "AQIAAIcCAAAAAAAAAAAnwKMCAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-26T06:57:05.204Z",
-              "EditorCaption": ""
             }
           ]
         },
         {
           "DockedWidth": 229,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "site.css",
+              "DocumentMoniker": "E:\\Projects\\Market\\Market\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "Market\\wwwroot\\css\\site.css",
+              "ToolTip": "E:\\Projects\\Market\\Market\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "Market\\wwwroot\\css\\site.css",
+              "ViewState": "AQIAACMAAAAAAAAAAAAAACMAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-26T06:57:05.204Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Description.cshtml",
+              "DocumentMoniker": "E:\\Projects\\Market\\Market\\Views\\Offers\\Description.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Offers\\Description.cshtml",
+              "ToolTip": "E:\\Projects\\Market\\Market\\Views\\Offers\\Description.cshtml",
+              "RelativeToolTip": "Market\\Views\\Offers\\Description.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAgAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-26T06:21:19.201Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "E:\\Projects\\Market\\Market\\Views\\User\\Register.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\User\\Register.cshtml",
+              "ToolTip": "E:\\Projects\\Market\\Market\\Views\\User\\Register.cshtml",
+              "RelativeToolTip": "Market\\Views\\User\\Register.cshtml",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAADAAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-26T19:15:06.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "Offer.cs",
               "DocumentMoniker": "E:\\Projects\\Market\\Market\\Data\\Models\\Offer.cs",
               "RelativeDocumentMoniker": "Market\\Data\\Models\\Offer.cs",
@@ -331,12 +375,11 @@
               "RelativeToolTip": "Market\\Data\\Models\\Offer.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAArwBcAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T08:38:10.829Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T08:38:10.829Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 19,
               "Title": "OrdersService.cs",
               "DocumentMoniker": "E:\\Projects\\Market\\Market\\Services\\Orders\\OrdersService.cs",
               "RelativeDocumentMoniker": "Market\\Services\\Orders\\OrdersService.cs",
@@ -344,12 +387,11 @@
               "RelativeToolTip": "Market\\Services\\Orders\\OrdersService.cs",
               "ViewState": "AQIAADUAAAAAAAAAAAAIwBoAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T06:31:28.97Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T06:31:28.97Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 18,
               "Title": "ReviewsService.cs",
               "DocumentMoniker": "E:\\Projects\\Market\\Market\\Services\\Reviews\\ReviewsService.cs",
               "RelativeDocumentMoniker": "Market\\Services\\Reviews\\ReviewsService.cs",
@@ -357,12 +399,11 @@
               "RelativeToolTip": "Market\\Services\\Reviews\\ReviewsService.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAAowCwAAABeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T08:27:55.216Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T08:27:55.216Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "_AcceptedOrderPartial.cshtml",
               "DocumentMoniker": "E:\\Projects\\Market\\Market\\Views\\Shared\\_AcceptedOrderPartial.cshtml",
               "RelativeDocumentMoniker": "Market\\Views\\Shared\\_AcceptedOrderPartial.cshtml",
@@ -370,25 +411,24 @@
               "RelativeToolTip": "Market\\Views\\Shared\\_AcceptedOrderPartial.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T06:51:23.088Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T06:51:23.088Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 2,
               "Title": "_DiscoverOfferPartial.cshtml",
               "DocumentMoniker": "E:\\Projects\\Market\\Market\\Views\\Shared\\_DiscoverOfferPartial.cshtml",
               "RelativeDocumentMoniker": "Market\\Views\\Shared\\_DiscoverOfferPartial.cshtml",
               "ToolTip": "E:\\Projects\\Market\\Market\\Views\\Shared\\_DiscoverOfferPartial.cshtml",
               "RelativeToolTip": "Market\\Views\\Shared\\_DiscoverOfferPartial.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAcAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-26T06:50:15.395Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 24,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\Projects\\Market\\Market\\Program.cs",
               "RelativeDocumentMoniker": "Market\\Program.cs",
@@ -396,12 +436,11 @@
               "RelativeToolTip": "Market\\Program.cs",
               "ViewState": "AQIAADUAAAAAAAAAAAAAAFMAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T06:47:59.738Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T06:47:59.738Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "Login.cshtml",
               "DocumentMoniker": "E:\\Projects\\Market\\Market\\Views\\User\\Login.cshtml",
               "RelativeDocumentMoniker": "Market\\Views\\User\\Login.cshtml",
@@ -409,25 +448,24 @@
               "RelativeToolTip": "Market\\Views\\User\\Login.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T06:44:06.653Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T06:44:06.653Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "UserController.cs",
               "DocumentMoniker": "E:\\Projects\\Market\\Market\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Market\\Controllers\\UserController.cs",
               "ToolTip": "E:\\Projects\\Market\\Market\\Controllers\\UserController.cs",
               "RelativeToolTip": "Market\\Controllers\\UserController.cs",
-              "ViewState": "AQIAAGEAAAAAAAAAAAAmwHQAAAAMAAAA",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAnwEAAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T06:31:29.005Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 20,
               "Title": "OfferService.cs",
               "DocumentMoniker": "E:\\Projects\\Market\\Market\\Services\\Offers\\OfferService.cs",
               "RelativeDocumentMoniker": "Market\\Services\\Offers\\OfferService.cs",
@@ -435,33 +473,19 @@
               "RelativeToolTip": "Market\\Services\\Offers\\OfferService.cs",
               "ViewState": "AQIAAE4AAAAAAAAAAAAmwCAAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T06:33:02.803Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T06:33:02.803Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 5,
               "Title": "Profile.cshtml",
               "DocumentMoniker": "E:\\Projects\\Market\\Market\\Views\\User\\Profile.cshtml",
               "RelativeDocumentMoniker": "Market\\Views\\User\\Profile.cshtml",
               "ToolTip": "E:\\Projects\\Market\\Market\\Views\\User\\Profile.cshtml",
               "RelativeToolTip": "Market\\Views\\User\\Profile.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-26T06:22:10.139Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Description.cshtml",
-              "DocumentMoniker": "E:\\Projects\\Market\\Market\\Views\\Offers\\Description.cshtml",
-              "RelativeDocumentMoniker": "Market\\Views\\Offers\\Description.cshtml",
-              "ToolTip": "E:\\Projects\\Market\\Market\\Views\\Offers\\Description.cshtml",
-              "RelativeToolTip": "Market\\Views\\Offers\\Description.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACMAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T06:21:19.201Z",
               "EditorCaption": ""
             }
           ]
