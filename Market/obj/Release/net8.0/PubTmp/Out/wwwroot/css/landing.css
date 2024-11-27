@@ -360,6 +360,19 @@ footer {
     display: none;
 }
 
+.footer-github{
+    display: flex;
+    gap: 4px;
+}
+
+.footer-github a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer-github a:hover{
+    color: yellow;
+}
 
 @media screen and (max-width: 480px) {
     * {

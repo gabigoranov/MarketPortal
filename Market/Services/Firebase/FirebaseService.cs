@@ -77,5 +77,11 @@ namespace Market.Services.Firebase
                 return formFile;
             }
         }
+
+        public async Task<string> GetImageUrl(string path, string imageId)
+        {
+            string url = await storage.Child(path).Child(imageId).GetDownloadUrlAsync();
+            return url;
+        }
     }
 }

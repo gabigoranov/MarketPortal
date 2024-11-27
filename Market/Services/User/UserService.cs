@@ -25,7 +25,7 @@ namespace Market.Services
         {
             factory = httpClientFactory;
             client = factory.CreateClient();
-            client.BaseAddress = new Uri("https://farmers-market.sommee.com/api/");
+            client.BaseAddress = new Uri("https://farmers-api.runasp.net/api/");
             User = GetUser();
             this.httpContextAccessor = httpContextAccessor;
             this.authService = authService;

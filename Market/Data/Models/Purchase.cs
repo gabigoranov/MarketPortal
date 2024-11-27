@@ -28,7 +28,7 @@ namespace Market.Data.Models
         public Guid? BuyerId { get; set; }
         public User Buyer { get; set; }
 
-        public ICollection<Order> Orders { get; set; } = new List<Order>();
+        public List<Order> Orders { get; set; } = new List<Order>();
 
 
     }

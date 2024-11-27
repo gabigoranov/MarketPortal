@@ -18,7 +18,7 @@ namespace Market.Services.Reviews
             user = userService.GetUser();
             _httpClientFactory = httpClientFactory;
             client = _httpClientFactory.CreateClient();
-            client.BaseAddress = new Uri("https://farmers-market.sommee.com/api/");
+            client.BaseAddress = new Uri("https://farmers-api.runasp.net/api/");
             _authenticationService = authenticationService;
         }
 

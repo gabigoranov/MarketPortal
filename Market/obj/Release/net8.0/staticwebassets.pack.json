@@ -5,12 +5,80 @@
       "PackagePath": "staticwebassets\\Market.bundle.scp.css"
     },
     {
-      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\globe-solid.svg",
-      "PackagePath": "staticwebassets\\Images\\globe-solid.svg"
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\Icons\\1.svg",
+      "PackagePath": "staticwebassets\\Images\\Icons\\1.svg"
     },
     {
-      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\globe.png",
-      "PackagePath": "staticwebassets\\Images\\globe.png"
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\Icons\\bananas.svg",
+      "PackagePath": "staticwebassets\\Images\\Icons\\bananas.svg"
+    },
+    {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\Icons\\carrot.svg",
+      "PackagePath": "staticwebassets\\Images\\Icons\\carrot.svg"
+    },
+    {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\Icons\\cucumber.svg",
+      "PackagePath": "staticwebassets\\Images\\Icons\\cucumber.svg"
+    },
+    {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\Icons\\eggs.svg",
+      "PackagePath": "staticwebassets\\Images\\Icons\\eggs.svg"
+    },
+    {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\Icons\\grapes.svg",
+      "PackagePath": "staticwebassets\\Images\\Icons\\grapes.svg"
+    },
+    {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\Icons\\lemon.svg",
+      "PackagePath": "staticwebassets\\Images\\Icons\\lemon.svg"
+    },
+    {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\Icons\\lettuce.svg",
+      "PackagePath": "staticwebassets\\Images\\Icons\\lettuce.svg"
+    },
+    {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\Icons\\onion.svg",
+      "PackagePath": "staticwebassets\\Images\\Icons\\onion.svg"
+    },
+    {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\Icons\\oranges.svg",
+      "PackagePath": "staticwebassets\\Images\\Icons\\oranges.svg"
+    },
+    {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\Icons\\pepper.svg",
+      "PackagePath": "staticwebassets\\Images\\Icons\\pepper.svg"
+    },
+    {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\Icons\\potato.svg",
+      "PackagePath": "staticwebassets\\Images\\Icons\\potato.svg"
+    },
+    {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\Icons\\steak.svg",
+      "PackagePath": "staticwebassets\\Images\\Icons\\steak.svg"
+    },
+    {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\Icons\\strawberry.svg",
+      "PackagePath": "staticwebassets\\Images\\Icons\\strawberry.svg"
+    },
+    {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\Icons\\tomato.svg",
+      "PackagePath": "staticwebassets\\Images\\Icons\\tomato.svg"
+    },
+    {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\categories\\dairy.jpg",
+      "PackagePath": "staticwebassets\\Images\\categories\\dairy.jpg"
+    },
+    {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\categories\\fruits.jpg",
+      "PackagePath": "staticwebassets\\Images\\categories\\fruits.jpg"
+    },
+    {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\categories\\meat.jpg",
+      "PackagePath": "staticwebassets\\Images\\categories\\meat.jpg"
+    },
+    {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\categories\\vegetables.jpg",
+      "PackagePath": "staticwebassets\\Images\\categories\\vegetables.jpg"
     },
     {
       "Id": "E:\\Projects\\Market\\Market\\wwwroot\\Images\\image-display-alt.png",
@@ -303,6 +371,10 @@
     {
       "Id": "E:\\Projects\\Market\\Market\\wwwroot\\manifest.json",
       "PackagePath": "staticwebassets\\manifest.json"
+    },
+    {
+      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\offer.jpg",
+      "PackagePath": "staticwebassets\\offer.jpg"
     },
     {
       "Id": "E:\\Projects\\Market\\Market\\wwwroot\\profile.jpg",
