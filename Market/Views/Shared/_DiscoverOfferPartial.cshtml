@@ -23,7 +23,20 @@
         </div>
         <div class="offer-item__details">
             <p class="offer-item__location">@Model.Town</p>
-            <p class="offer-item__price">@Model.PricePerKG BGN/KG</p>
+            @if(User.IsInRole("Organization"))
+            {
+                <div class="row">
+                    <p class="offer-item__price">
+                        @(Model.PricePerKG * (100 - Model.Discount) / 100) BGN /KG
+                    </p>
+                    <p class="offer-item__price strikethrough">@Model.PricePerKG</p>
+                </div>
+            }
+            else
+            {
+                <p class="offer-item__price strikethrough">@Model.PricePerKG BGN /KG</p>
+            }
+
         </div>
     </div>
 </a>

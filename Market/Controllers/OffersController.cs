@@ -91,8 +91,7 @@ namespace Market.Controllers
         public async Task<IActionResult> Description(int id)
         {
             Offer offer = await _offerService.GetByIdAsync(id);
-            IFormFile image = await _firebaseService.GetFileAsync("offers", id.ToString());
-            _firebaseService.SaveFile(image, $"offer.jpg");
+            ViewBag.url = await _firebaseService.GetImageUrl("offers", id.ToString());
             return View(offer);
         }
 

@@ -44,5 +44,9 @@ namespace Market.Data.Models
         [Required]
         public DateTime DatePosted { get; set; }
 
+        [Required]
+        [Range(minimum: 5, maximum: 20)]
+        public int Discount { get; set; }
+
     }
 }

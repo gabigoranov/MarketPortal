@@ -29,5 +29,10 @@ namespace Market.Models
 
         [Required]
         public Guid OwnerId { get; set; }
+
+
+        [Required]
+        [Range(minimum: 5, maximum: 20)]
+        public int Discount { get; set; }
     }
 }

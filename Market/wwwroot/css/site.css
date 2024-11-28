@@ -331,6 +331,22 @@ html {
 
 /* History */
 
+.history-purchase-orders-container{
+    display: none;
+    height: 0;
+    transition: 300ms all ease-in-out;   
+    width: 100%; 
+}
+
+.cart-order { 
+    transition: 300ms all ease-in-out; 
+}
+
+.history-purchase-orders-container.active{
+    display: block;
+    height: auto;
+}
+
 .history-container{
     display: flex;
     flex-flow: column;
@@ -343,6 +359,21 @@ html {
     text-align: center;
     background: var(--background-light);
     border-radius: 12px;
+}
+
+.strikethrough {
+    position: relative;
+    color: red; 
+}
+
+.strikethrough::before {
+    content: '';
+    position: absolute;
+    top: 50%; 
+    left: 0;
+    right: 0;
+    height: 2px; 
+    background-color: red;
 }
 
 .history-purchase {
@@ -669,6 +700,7 @@ button:hover{
 
 .row{
     display: flex !important;
+    align-items: center;
     flex-flow: row !important;
     gap: 12px;
 }

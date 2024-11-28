@@ -29,6 +29,10 @@
         <input asp-for="Offer.PricePerKG" placeholder="Price Per KG" aria-required="true" />
         <span asp-validation-for="Offer.PricePerKG" class="text-danger"></span>
     </div>
+    <div class ="form-container">
+        <input asp-for="Offer.Discount" placeholder="Discount %" aria-required="true" />
+        <span asp-validation-for="Offer.Discount" class="text-danger"></span>
+    </div>
     <div class="form-container">
         <select asp-for="Offer.StockId">
             @foreach(Stock stock in _inventoryService.GetSellerStocksAsync().Result)

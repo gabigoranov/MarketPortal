@@ -2,15 +2,16 @@
 @model User
 @{
     ViewData["Title"] = "Profile";
+    string? profilePicture = ViewBag.profilePicture as string;
 }
 <section class="profile-section">
     <div class="profile-container">
-        <img class="image-display" src="~/profile.jpg" alt="your profile image" />
+        <img class="image-display" src="@profilePicture" alt="your profile image" />
         <div class="profile-data-container">
-            <h2>@(User.IsInRole("Seller") ? $"{Model.FirstName} {Model.LastName}" : $"{Model.OrganizationName}, {Model.Town}")</h2>
+            <h2>@(User.IsInRole("Seller") ? ($"{Model.FirstName} {Model.LastName}") : ($"{Model.OrganizationName}, {Model.Town}"))</h2>
             @if(User.IsInRole("Seller"))
             {
-                <h3>@(Model.Town + ", Age: " + Model.Age + " Rating: " + Model.Rating))</h3>
+                <h3>@(Model.Town + ", Age: " + Model.Age + " Rating: " + Model.Rating)</h3>
             }
             <h3><i class="fa-solid fa-phone" style="font-size: 22px;"></i> @Model.PhoneNumber</h3>
             <p class="profile-description">@Model.Description</p>

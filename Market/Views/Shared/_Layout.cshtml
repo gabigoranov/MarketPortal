@@ -37,10 +37,9 @@
                     </li>
                     @if(User.IsInRole("Seller"))
                     {
-                        <li class="sidebar-item">
-                            <hr style="color: #636363" />
-                            <a class="sidebar-link-mini" asp-area="" asp-controller="Offers" asp-action="AddOffer">@Localizer["AddNewOffer"]</a>
-                        </li>
+                        <hr style="color: #636363" />
+                        <a class="sidebar-link-mini" asp-area="" asp-controller="Offers" asp-action="AddOffer">@Localizer["AddNewOffer"]</a>
+
                     }
                     @if (User.IsInRole("Seller"))
                     {
@@ -50,10 +49,8 @@
                     }
                     @if (User.IsInRole("Seller"))
                     {
-                        <li class="sidebar-item">
-                            <hr style="color: #636363" />
-                            <a class="sidebar-link-mini" asp-area="" asp-controller="Inventory" asp-action="Add">@Localizer["RegisterNewStock"]</a>
-                        </li>
+                        <hr style="color: #636363" />
+                        <a class="sidebar-link-mini" asp-area="" asp-controller="Inventory" asp-action="Add">@Localizer["RegisterNewStock"]</a>
                     }
                     @if (User.IsInRole("Seller"))
                     {

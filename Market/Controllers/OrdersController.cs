@@ -65,7 +65,7 @@ namespace Market.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Sort(List<Order> orders, string type)
+        public IActionResult Sort(List<Order> orders, string type)
         {
             orders = orders.OrderByDescending(x => x.Price).ToList();
             return RedirectToAction("Index", orders);
@@ -83,6 +83,18 @@ namespace Market.Controllers
         public async Task<IActionResult> History()
         {
             List<Purchase> purchases = await _userService.GetUserBoughtPurchases();
+            Dictionary<int, Dictionary<int, string>> imageURLs = new Dictionary<int, Dictionary<int, string>>();
+            foreach (Purchase purchase in purchases)
+            {
+                Dictionary<int, string> res = new Dictionary<int, string>();
+                foreach (Order order in purchase.Orders)
+                {
+                    res.Add(order.Id, await _firebaseService.GetImageUrl("offers", order.OfferId.ToString()));
+                }
+                imageURLs.Add(purchase.Id, res);
+            }
+            ViewBag.imageURLs = imageURLs;
+
             return View(purchases);
         }
     }

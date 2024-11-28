@@ -40,19 +40,6 @@ namespace Market.Controllers
                 return View(model);
             }
 
-            IFormFile file = await _firebaseService.GetFileAsync("profiles", model.Email);
-            using (var inputStream = file.OpenReadStream())
-            {
-                using (var image = Image.FromStream(inputStream))
-                {
-                    using (var outputStream = new MemoryStream())
-                    {
-                        image.Save(outputStream, ImageFormat.Jpeg);
-
-                        System.IO.File.WriteAllBytes(Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot\", "profile.jpg"), outputStream.ToArray());
-                    }
-                }
-            }
 
             User user = await _userService.Login(model.Email, model.Password);
 
@@ -115,9 +102,11 @@ namespace Market.Controllers
         
         [HttpGet]
         [Authorize]
-        public IActionResult Profile()
+        public async Task<IActionResult> Profile()
         {
-            return View(_userService.GetUser());
+            User user = _userService.GetUser();
+            ViewBag.profilePicture = await _firebaseService.GetImageUrl("profiles", user.Email);
+            return View(user);
         }
 
         [HttpGet]

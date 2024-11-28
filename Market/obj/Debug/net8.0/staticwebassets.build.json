@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OmkMzCCTKVrwhmdyl1RKSxeuvBrgooBBl8cfVSjATM0=",
+  "Hash": "a4aHmQ989aHVKSp3AqJfnpg7fkb2qLFqkFy+7Jw9wKk=",
   "Source": "Market",
   "BasePath": "_content/Market",
   "Mode": "Default",
@@ -2941,44 +2941,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\manifest.json"
-    },
-    {
-      "Identity": "E:\\Projects\\Market\\Market\\wwwroot\\offer.jpg",
-      "SourceId": "Market",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Projects\\Market\\Market\\wwwroot\\",
-      "BasePath": "_content/Market",
-      "RelativePath": "offer.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\offer.jpg"
-    },
-    {
-      "Identity": "E:\\Projects\\Market\\Market\\wwwroot\\profile.jpg",
-      "SourceId": "Market",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Projects\\Market\\Market\\wwwroot\\",
-      "BasePath": "_content/Market",
-      "RelativePath": "profile.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\profile.jpg"
     }
   ]
 }

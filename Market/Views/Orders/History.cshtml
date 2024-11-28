@@ -2,19 +2,20 @@
 @model List<Purchase>
 @{
     ViewData["Title"] = "History";
+    Dictionary<int, Dictionary<int, string>>? imageUrls = ViewBag.imageURLs as Dictionary<int, Dictionary<int, string>>;
 }
 
 <div class="history-container">
     <h1>History</h1>
     <div class="history-purchases-container">
-        @for (int i = 0; i < Model.Count; i++)
+        @foreach (var purchase in Model)
         {
-            Purchase purchase = Model[i];
-
-            <div class="history-purchase" data-percentage="@(((double)purchase.Orders.Where(x => x.IsDelivered).Count() / purchase.Orders.Count()) * 100)">
+            double rawPercent = (double)purchase.Orders.Count(x => x.IsDelivered) / purchase.Orders.Count() *100;
+            double percentDelivered = System.Math.Round(rawPercent, 2);
+            <div class="history-purchase" data-id="@purchase.Id" data-percentage="@percentDelivered">
                 <div class="history-purchase-container">
                     <h2 class="history-purchase-container__title">
-                        Date Ordered: @(purchase.DateOrdered.ToShortDateString())
+                        Date Ordered: @purchase.DateOrdered.ToShortDateString()
                     </h2>
                     <h2 class="history-purchase-container__title">
                         Address: @purchase.Address
@@ -22,14 +23,32 @@
                 </div>
                 <div class="history-purchase-container-info">
                     <h2 class="history-purchase-container__subtitle">
-                        Status: Unknown
+                        Status: @(percentDelivered)% Delivered
                     </h2>
                     <h2 class="history-purchase-container__subtitle">
                         Price: @purchase.Price BGN
                     </h2>
                 </div>
+                
             </div>
+            <div class="history-purchase-orders-container" id="@purchase.Id">
+                @foreach (Order order in purchase.Orders)
+                {
+                    <div class="cart-order">
+                        <img class="cart-order__image" src="@imageUrls[purchase.Id][order.Id]" alt="order image"/>
+                        <div class="cart-order-container">
+                            <h2 class="cart-order-container__title">
+                                @(order.Title) - @(order.Quantity) KG
+                            </h2>
+                            <div class="cart-order-container-info">
+                                <h4>@(order.IsDelivered ? "Delivered" : (order.IsAccepted ? "Accepted" : (order.IsDenied ? "Denied" : "Unknown")))</h4>
+                                <h4>@(order.Price) BGN</h4>
+                            </div>
 
+                        </div>
+                    </div>
+                }
+            </div>
         }
     </div>
 
@@ -37,17 +56,23 @@
 
 <script defer>
     function setGradient() {
-        var divs = document.getElementsByClassName('history-purchase');
+        let divs = document.getElementsByClassName('history-purchase');
 
         for(let item of divs)
         {
             let percentage = item.getAttribute("data-percentage");
+            let id = item.getAttribute("data-id");
             item.style.background = `linear-gradient(to right, #69f0ae ${percentage}%, #ffffff ${percentage}%)`;
 
+            item.addEventListener("click", function() {
+                document.getElementById(id).classList.toggle("active");
+            });
+            
         }
     }
 
     window.addEventListener('load', function () {
         setGradient();
     });
+    
 </script>

@@ -373,14 +373,6 @@
       "PackagePath": "staticwebassets\\manifest.json"
     },
     {
-      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\offer.jpg",
-      "PackagePath": "staticwebassets\\offer.jpg"
-    },
-    {
-      "Id": "E:\\Projects\\Market\\Market\\wwwroot\\profile.jpg",
-      "PackagePath": "staticwebassets\\profile.jpg"
-    },
-    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Market.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
