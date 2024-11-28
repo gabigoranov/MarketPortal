@@ -293,3 +293,9 @@ E:\Projects\Market\Market\obj\Release\net8.0\Market.Resources.Views.Shared._Layo
 E:\Projects\Market\Market\obj\Release\net8.0\Market.Resources.Views.Shared._Layout.en.resources
 E:\Projects\Market\Market\obj\Release\net8.0\bg\Market.resources.dll
 E:\Projects\Market\Market\obj\Release\net8.0\en\Market.resources.dll
+E:\Projects\Market\Market\obj\Release\net8.0\Market.Resources.Views.Shared._LoginPartial.bg.resources
+E:\Projects\Market\Market\obj\Release\net8.0\Market.Resources.Views.Shared._LoginPartial.en.resources
+E:\Projects\Market\Market\obj\Release\net8.0\Market.Resources.Views.User.Login.bg.resources
+E:\Projects\Market\Market\obj\Release\net8.0\Market.Resources.Views.User.Login.en.resources
+E:\Projects\Market\Market\obj\Release\net8.0\Market.Resources.Views.User.Register.bg.resources
+E:\Projects\Market\Market\obj\Release\net8.0\Market.Resources.Views.User.Register.en.resources

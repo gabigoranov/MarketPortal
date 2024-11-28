@@ -1,0 +1,53 @@
+﻿@using Market.Data.Models
+@model List<Purchase>
+@{
+    ViewData["Title"] = "History";
+}
+
+<div class="history-container">
+    <h1>History</h1>
+    <div class="history-purchases-container">
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            Purchase purchase = Model[i];
+
+            <div class="history-purchase" data-percentage="@(((double)purchase.Orders.Where(x => x.IsDelivered).Count() / purchase.Orders.Count()) * 100)">
+                <div class="history-purchase-container">
+                    <h2 class="history-purchase-container__title">
+                        Date Ordered: @(purchase.DateOrdered.ToShortDateString())
+                    </h2>
+                    <h2 class="history-purchase-container__title">
+                        Address: @purchase.Address
+                    </h2>
+                </div>
+                <div class="history-purchase-container-info">
+                    <h2 class="history-purchase-container__subtitle">
+                        Status: Unknown
+                    </h2>
+                    <h2 class="history-purchase-container__subtitle">
+                        Price: @purchase.Price BGN
+                    </h2>
+                </div>
+            </div>
+
+        }
+    </div>
+
+</div>
+
+<script defer>
+    function setGradient() {
+        var divs = document.getElementsByClassName('history-purchase');
+
+        for(let item of divs)
+        {
+            let percentage = item.getAttribute("data-percentage");
+            item.style.background = `linear-gradient(to right, #69f0ae ${percentage}%, #ffffff ${percentage}%)`;
+
+        }
+    }
+
+    window.addEventListener('load', function () {
+        setGradient();
+    });
+</script>

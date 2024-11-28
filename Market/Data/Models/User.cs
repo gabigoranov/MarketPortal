@@ -13,14 +13,14 @@ namespace Market.Data.Models
 
         [Required]
         [StringLength(12)]
-        public virtual string FirstName { get; set; }
+        public  string? FirstName { get; set; }
 
         [Required]
         [StringLength(12)]
-        public virtual string LastName { get; set; }
+        public string? LastName { get; set; }
 
         [Required]
-        public virtual int Age { get; set; }
+        public int? Age { get; set; }
 
 
         [Required]
@@ -53,11 +53,12 @@ namespace Market.Data.Models
         public string? OrganizationName { get; set; }
 
         [Required]
-        public double Rating { get; set; } = 0.0;
-        public virtual ICollection<Order> SoldOrders { get; set; } = new List<Order>();
-        public List<Offer> Offers { get; set; } = new List<Offer>();
+        public double? Rating { get; set; } = 0.0;
+        public List<Order>? SoldOrders { get; set; } = new List<Order>();
+        public List<Offer>? Offers { get; set; } = new List<Offer>();
 
-        public ICollection<Order> BoughtOrders { get; set; } = new List<Order>();
+        public List<Order>? BoughtOrders { get; set; } = new List<Order>();
+        public List<Purchase>? BoughtPurchases { get; set; } = new List<Purchase>();
 
     }
 }

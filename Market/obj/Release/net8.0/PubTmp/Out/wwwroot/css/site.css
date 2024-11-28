@@ -329,9 +329,92 @@ html {
 }
 
 
+/* History */
+
+.history-container{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    padding:  12px;
+    text-align: center;
+    background: var(--background-light);
+    border-radius: 12px;
+}
+
+.history-purchase {
+    display: flex;
+    flex-flow: column;
+    background: var(--background-light);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 12px;
+    height: 150px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-order:nth-child(2n){
+    flex-flow: row-reverse;
+    text-align: right;
+
+}
+
+.history-container h1{
+    margin-top: 42px;
+}
+
+
+.history-purchases-container {
+    display: flex;
+    flex-flow: column;
+    gap: 12px;
+    width: 900px;
+    min-height: 100% auto;
+    background: var(--grey-light);
+    border-radius: 12px;
+    padding: 12px;
+
+}
+
+
+.history-purchase-container {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    padding: 0px 24px;
+    width: 100%;
+    align-items: center;
+}
+
+.history-purchase-container__description{
+    width: 400px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.history-purchase-container-info {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    gap: 12px;
+    border-radius: 12px;
+    width: 100%;
+    padding: 0px 24px;
+    align-items: center;
+}
+
+.history-purchase-container__subtitle {
+    font-weight: 300;
+    font-size: 22px;
+}
 
 /* layout */
-main{
+main {
     display: flex;
     height: 100vh;
 }
@@ -369,6 +452,7 @@ main{
 .sidebar-item:hover {
     color: var(--text-light);
     background-color: var(--accent);
+    cursor: pointer;
 }
 
 .sidebar-link {
@@ -381,6 +465,7 @@ main{
     font-style: normal;
     text-align: left;
     padding-left: 14px;
+    width: 100%;
 }
 .sidebar-link:hover{
     color: inherit;
@@ -862,8 +947,8 @@ i{
 }
 
 hr{
-    margin-top: 12px;
-    margin-bottom: 32px;
+    margin-top: 2px;
+    margin-bottom: 4px;
 }
 
 .offer-description{
@@ -936,6 +1021,21 @@ hr{
 }
 
 @media screen and (max-width: 580px) {
+
+    .offer-container{
+        flex-flow: column;
+    }
+
+    .offer-data-container h1{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .offer-item__rating{
+        font-size: 8px;
+    }
 
     .split-screen {
         flex-direction: column; 

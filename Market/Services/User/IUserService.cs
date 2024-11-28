@@ -12,5 +12,6 @@ namespace Market.Services
         public User GetUser();
         Task AddApprovedOrderAsync(int id);
         Task AddDeliveredOrder(int id);
+        Task<List<Purchase>> GetUserBoughtPurchases();
     }
 }

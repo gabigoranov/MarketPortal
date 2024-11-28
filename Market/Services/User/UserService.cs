@@ -9,6 +9,7 @@ using Market.Services.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http.HttpResults;
+using Azure;
 
 namespace Market.Services
 {
@@ -39,11 +40,9 @@ namespace Market.Services
             if (response.IsSuccessStatusCode)
             {
                 var stringResponse = await response.Content.ReadAsStringAsync();
-                Debug.WriteLine(stringResponse);
 
                 result = JsonSerializer.Deserialize<User>(stringResponse,
                          new JsonSerializerOptions() { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
-                Debug.WriteLine(response.Content.ToString());
                 User = result;
             }
             else
@@ -120,6 +119,30 @@ namespace Market.Services
                 return null;
             }
             return User;
+        }
+
+        public async Task<List<Purchase>> GetUserBoughtPurchases()
+        {
+            var result = new List<Purchase>();
+            User = GetUser();
+            if (User == null)
+            {
+                throw new Exception("Error with login");
+            }
+            string url = $"https://farmers-api.runasp.net/api/users/history?id={User.Id}";
+            var response = await client.GetAsync(url);
+            if (response.IsSuccessStatusCode)
+            {
+                var stringResponse = await response.Content.ReadAsStringAsync();
+
+                result = JsonSerializer.Deserialize<List<Purchase>>(stringResponse,
+                         new JsonSerializerOptions() { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
+            }
+            else
+            {
+                throw new HttpRequestException(response.ReasonPhrase);
+            }
+            return result;
         }
     }
 }

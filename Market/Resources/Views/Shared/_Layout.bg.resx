@@ -120,8 +120,14 @@
   <data name="AddNewOffer" xml:space="preserve">
     <value>Добавете Оферта</value>
   </data>
+  <data name="Cart" xml:space="preserve">
+    <value>Количка</value>
+  </data>
   <data name="Dashboard" xml:space="preserve">
     <value>Управление</value>
+  </data>
+  <data name="Dsicover" xml:space="preserve">
+    <value>Открийте</value>
   </data>
   <data name="Help" xml:space="preserve">
     <value>Помощ?</value>
@@ -131,6 +137,9 @@
   </data>
   <data name="Inventory" xml:space="preserve">
     <value>Стоки</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Влезте</value>
   </data>
   <data name="Offers" xml:space="preserve">
     <value>Оферти</value>
@@ -143,5 +152,8 @@
   </data>
   <data name="Reviews" xml:space="preserve">
     <value>Ревюта</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Потърсете Тук....</value>
   </data>
 </root>

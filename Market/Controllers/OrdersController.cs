@@ -78,5 +78,12 @@ namespace Market.Controllers
             _userService.AddDeliveredOrder(id);
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public async Task<IActionResult> History()
+        {
+            List<Purchase> purchases = await _userService.GetUserBoughtPurchases();
+            return View(purchases);
+        }
     }
 }

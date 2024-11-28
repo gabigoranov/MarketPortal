@@ -1,4 +1,6 @@
 ﻿@model UserViewModel
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 
 @{
     ViewData["Title"] = "Login";
@@ -9,14 +11,14 @@
         <form class="login-form" asp-controller="User" asp-action="Login" method="post">
             <h2>Login</h2>
             <div>
-                <input asp-for="@Model.Email" autocomplete="email" placeholder="Email" aria-required="true" />
+                <input asp-for="@Model.Email" autocomplete="email" placeholder="@Localizer["Email"]" aria-required="true" />
                 <span asp-validation-for="@Model.Email" class="text-danger"></span>
             </div>
             <div>
-                <input asp-for="@Model.Password" autocomplete="password" placeholder="Password" aria-required="true" />
+                <input asp-for="@Model.Password" autocomplete="password" placeholder="@Localizer["Password"]" aria-required="true" />
                 <span asp-validation-for="@Model.Password" class="text-danger"></span>
             </div>
-            <button class="custom-file-upload" type="submit">Login</button>
+            <button class="custom-file-upload" type="submit">@Localizer["Login"]</button>
         </form>
     </div>
 </div>

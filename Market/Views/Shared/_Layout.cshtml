@@ -37,17 +37,44 @@
                     </li>
                     @if(User.IsInRole("Seller"))
                     {
-                        <hr style="color: #636363" />
-                    <a class="sidebar-link-mini" asp-area="" asp-controller="Offers" asp-action="AddOffer">@Localizer["AddNewOffer"]</a>
+                        <li class="sidebar-item">
+                            <hr style="color: #636363" />
+                            <a class="sidebar-link-mini" asp-area="" asp-controller="Offers" asp-action="AddOffer">@Localizer["AddNewOffer"]</a>
+                        </li>
                     }
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" asp-area="" asp-controller="Inventory" asp-action="Index"><i class="fa-solid fa-warehouse sidebar-icon"></i>@Localizer["Inventory"]</a>
-                    </li>
-                    <hr style="color: #636363" />
-                    <a class="sidebar-link-mini" asp-area="" asp-controller="Inventory" asp-action="Add">@Localizer["RegisterNewStock"]</a>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" asp-area="" asp-controller="Reviews" asp-action="Index"><i class="fa-solid fa-comments sidebar-icon"></i>@Localizer["Reviews"]</a>
-                    </li>
+                    @if (User.IsInRole("Seller"))
+                    {
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" asp-area="" asp-controller="Inventory" asp-action="Index"><i class="fa-solid fa-warehouse sidebar-icon"></i>@Localizer["Inventory"]</a>
+                        </li>
+                    }
+                    @if (User.IsInRole("Seller"))
+                    {
+                        <li class="sidebar-item">
+                            <hr style="color: #636363" />
+                            <a class="sidebar-link-mini" asp-area="" asp-controller="Inventory" asp-action="Add">@Localizer["RegisterNewStock"]</a>
+                        </li>
+                    }
+                    @if (User.IsInRole("Seller"))
+                    {
+
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" asp-area="" asp-controller="Reviews" asp-action="Index"><i class="fa-solid fa-comments sidebar-icon"></i>@Localizer["Reviews"]</a>
+                        </li>
+                    }
+                    @if (User.IsInRole("Organization"))
+                    {
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" asp-area="" asp-controller="Orders" asp-action="History"><i class="fa-solid fa-history sidebar-icon"></i>@Localizer["History"]</a>
+                        </li>
+                    }
+                    @if (User.IsInRole("Organization"))
+                    {
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" asp-area="" asp-controller="Cart" asp-action="Index"><i class="fa-solid fa-cart-shopping sidebar-icon"></i>@Localizer["Cart"]</a>
+                        </li>
+                    }
+                    
                     
                 </ul>
                 <div class="sidebar-bottom-row">
@@ -65,7 +92,7 @@
             <div class="content">
                 <header>
                     <form class="search-container">
-                        <input class="search" placeholder="Search here...." />
+                        <input class="search" placeholder="@Localizer["Search"]" />
                         <button class="search-button" type="submit"><i class="fa-solid fa-magnifying-glass sidebar-icon"></i></button>
                     </form>
                     <partial name="_LoginPartial" />

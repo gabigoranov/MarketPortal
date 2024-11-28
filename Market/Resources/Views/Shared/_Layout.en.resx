@@ -120,8 +120,14 @@
   <data name="AddNewOffer" xml:space="preserve">
     <value>AddNewOffer</value>
   </data>
+  <data name="Cart" xml:space="preserve">
+    <value>Cart</value>
+  </data>
   <data name="Dashboard" xml:space="preserve">
     <value>Dashboard</value>
+  </data>
+  <data name="Discover" xml:space="preserve">
+    <value>Discover</value>
   </data>
   <data name="Help" xml:space="preserve">
     <value>Need Help?</value>
@@ -143,5 +149,8 @@
   </data>
   <data name="Reviews" xml:space="preserve">
     <value>Reviews</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search here....</value>
   </data>
 </root>
