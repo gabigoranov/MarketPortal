@@ -1,5 +1,7 @@
 ﻿using Market.Data.Models;
+using Market.Models;
 using Market.Services.Authentication;
+using System.Text;
 using System.Text.Json;
 
 namespace Market.Services.Reviews
@@ -44,6 +46,14 @@ namespace Market.Services.Reviews
             user.Offers.Single(x => x.Reviews.Any(x => x.Id == id)).Reviews.Remove(user.Offers.Single(x => x.Reviews.Any(x => x.Id == id)).Reviews.Single(x => x.Id == id));
             await _authenticationService.UpdateUserData(JsonSerializer.Serialize<User>(user));
             var response = await client.DeleteAsync(url);
+        }
+
+        public async Task AddReviewAsync(Review review)
+        {
+            var jsonParsed = JsonSerializer.Serialize<Review>(review, new JsonSerializerOptions() { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
+            HttpContent content = new StringContent(jsonParsed.ToString(), Encoding.UTF8, "application/json");
+            string url = $"https://farmers-api.runasp.net/api/reviews/add/";
+            var response = await client.PostAsync(url, content);
         }
     }
 }

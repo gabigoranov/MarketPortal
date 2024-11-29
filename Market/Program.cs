@@ -16,6 +16,7 @@ using Microsoft.AspNetCore.Localization;
 using System.Globalization;
 using Microsoft.Extensions.Options;
 using Market.Services.Cart;
+using System.Text.Json;
 
 var cookiePolicyOptions = new CookiePolicyOptions
 {
@@ -25,7 +26,10 @@ var cookiePolicyOptions = new CookiePolicyOptions
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews()
-     .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix);
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+    }).AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix);
 builder.Services.AddHttpClient();
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)

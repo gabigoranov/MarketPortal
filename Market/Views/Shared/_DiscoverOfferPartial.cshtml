@@ -3,10 +3,9 @@
 
 <a asp-controller="Offers" asp-action="Description" asp-route-id="@Model.Id">
     <div class="offer-item">
-        <div class="offer-item__container">
+        <div class="offer-item__container" id="svg-container">
             <div class="container">
                 <div class="offer-item__header">
-                    <img class="offer-item_icon" src="~/Images/Icons/1.svg"></img>
                     <h3 class="offer-item__title">
                         <span>@Model.Title</span>
                         <span class="offer-item__rating">
@@ -27,7 +26,7 @@
             {
                 <div class="row">
                     <p class="offer-item__price">
-                        @(Model.PricePerKG * (100 - Model.Discount) / 100) BGN /KG
+                        @(string.Format("{0:0.00}", (Model.PricePerKG * (100 - Model.Discount) / 100))) BGN /KG
                     </p>
                     <p class="offer-item__price strikethrough">@Model.PricePerKG</p>
                 </div>
@@ -40,4 +39,5 @@
         </div>
     </div>
 </a>
+
 

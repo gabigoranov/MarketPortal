@@ -1,0 +1,32 @@
+﻿@using Market.Data.Models
+@model Review
+
+<form asp-action="Add" asp-controller="Reviews" method="post" id="reviewForm " class="add-review-form">
+    <div class="row">
+        <div class="form-group">
+            <input type="hidden" asp-for="@Model.OfferId" name="OfferId" />
+            <input class="form-control" id="Description" placeholder="Describe your opinion" name="Description" required>
+            @Model.Description
+            </input>
+        </div>
+
+        <div class="form-group">
+            <select class="form-control select-language" asp-for="Rating" id="Rating" name="Rating" required>
+                <option value="">Select a rating</option>
+                @for (int i = 1; i <= 5; i++)
+                {
+                    if (Model?.Rating == i)
+                    {
+                        <option value="@i" selected>@i Star(s)</option>
+                    }
+                    else
+                    {
+                        <option value="@i">@i Star(s)</option>
+                    }
+                }
+            </select>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary action-button">Submit Review</button>
+</form>

@@ -5,6 +5,7 @@ using Market.Services.Offers;
 using Market.Services.Reviews;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace Market.Controllers
 {
@@ -32,6 +33,30 @@ namespace Market.Controllers
         {
             await _reviewsService.RemoveReviewAsync(id);
             return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Add(Review review)
+        {
+            User user = _userService.GetUser();
+            if (User.IsInRole("Organization"))
+            {
+                review.FirstName = user.OrganizationName!;
+                review.LastName = "";
+            }
+            else
+            {
+                review.FirstName = user.FirstName!;
+                review.LastName = user.LastName!;
+            }
+            await _reviewsService.AddReviewAsync(review);
+            return RedirectToAction("Discover", "Offers");
+            
+        }
+
+        public ActionResult ReviewPartial([FromBody] Review entity)
+        {
+            return PartialView("_SimpleReviewPartial", entity);
         }
     }
 }

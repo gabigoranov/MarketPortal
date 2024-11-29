@@ -25,11 +25,12 @@
         </div>
     </div>
 
-    <div class="gapped" id="discover-offers">
-        @if (Model.Count == 0)
-        {
-            <h1>@Localizer["NoOffersFound"]</h1>
-        }
+    @if (Model.Count == 0)
+    {
+        <h1>@Localizer["NoOffersFound"]</h1>
+    }
+
+    <div class="discover-offers" id="discover-offers">
         @foreach (Offer offer in Model)
         {
             <div class="offer" category="@offer.Stock.OfferType.Category">
