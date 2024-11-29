@@ -1,0 +1,29 @@
+﻿@using Market.Data.Models
+@using Market.Models
+@model Purchase
+
+@{
+    Purchase purchase = Model;
+    double rawPercent = (double)purchase.Orders.Count(x => x.IsDelivered) / purchase.Orders.Count() * 100;
+    double percentDelivered = System.Math.Round(rawPercent, 2);
+}
+
+
+<div class="history-purchase" data-id="@purchase.Id" data-percentage="@percentDelivered">
+    <div class="history-purchase-container">
+        <h2 class="history-purchase-container__title">
+            Date Ordered: @purchase.DateOrdered.ToShortDateString()
+        </h2>
+        <h2 class="history-purchase-container__title">
+            Address: @purchase.Address
+        </h2>
+    </div>
+    <div class="history-purchase-container-info">
+        <h2 class="history-purchase-container__subtitle">
+            Status: @(percentDelivered)% Delivered
+        </h2>
+        <h2 class="history-purchase-container__subtitle">
+            Price: @purchase.Price BGN
+        </h2>
+    </div>
+</div>

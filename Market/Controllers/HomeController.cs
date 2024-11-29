@@ -2,6 +2,8 @@ using Market.Data.Models;
 using Market.Models;
 using Market.Services;
 using Market.Services.Authentication;
+using Market.Services.Cart;
+using Market.Services.Firebase;
 using Market.Services.Inventory;
 using Market.Services.Reviews;
 using Microsoft.AspNetCore.Authorization;
@@ -20,9 +22,11 @@ namespace Market.Controllers
         private readonly IAuthenticationService _authService;
         private readonly IInventoryService _inventoryServive;
         private readonly IUserService _userService;
+        private readonly ICartService _cartService;
+        private readonly IFirebaseServive _firebaseService;
         private User _user;
 
-        public HomeController(ILogger<HomeController> logger, IUserService userService, IAuthenticationService authService, IInventoryService inventoryServive, IReviewsService reviewsService)
+        public HomeController(ILogger<HomeController> logger, IUserService userService, IAuthenticationService authService, IInventoryService inventoryServive, IReviewsService reviewsService, ICartService cartService, IFirebaseServive firebaseService)
         {
             _logger = logger;
             _userService = userService;
@@ -30,6 +34,8 @@ namespace Market.Controllers
             _authService = authService;
             _inventoryServive = inventoryServive;
             _reviewsService = reviewsService;
+            _cartService = cartService;
+            _firebaseService = firebaseService;
         }
 
         [Authorize]
@@ -68,6 +74,24 @@ namespace Market.Controllers
                 
             }
             return RedirectToAction("Landing");
+        }
+
+
+        [HttpGet]
+        public async Task<IActionResult> HomeAsync()
+        {
+            Purchase? purchase = _cartService.GetPurchase();
+            if (purchase == null) purchase = new Purchase();
+
+            List<string> urls = new List<string>();
+            foreach (Order order in purchase.Orders)
+            {
+                urls.Add(await _firebaseService.GetImageUrl("offers", order.Offer.Id.ToString()));
+            }
+
+            ViewBag.ImageURLs = urls;
+
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

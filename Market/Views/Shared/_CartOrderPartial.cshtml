@@ -1,0 +1,38 @@
+﻿@using Market.Data.Models
+@model CartOrderViewModel
+
+@{
+    Order order = Model.Order;
+    string url = Model.URL;
+    int quantity = 0;
+}
+
+<div class="cart-order">
+    <img class="cart-order__image" src="@url" />
+    <div class="cart-order-container">
+        <h2 class="cart-order-container__title">
+            @(order.Title) - @(order.Quantity) KG
+        </h2>
+        <p class="cart-order-container__description">@order.Offer.Description</p>
+        <div class="cart-order-container-info">
+            <h4>@order.Offer.Town</h4>
+            <h4>@(order.Price) BGN</h4>
+        </div>
+
+    </div>
+    <div class="cart-order-manage-container">
+        <form asp-controller="Cart" asp-action="Delete" method="post" asp-route-id="">
+            <button class="clear-button" value="@Model.Id" type="submit">
+                <i class="fa-solid fa-trash"></i>
+            </button>
+        </form>
+        <form class="quantity-form" asp-controller="Cart" asp-action="Quantity" method="post" asp-route-id="@Model.Id" asp-route-quantity="@quantity">
+            <input type="hidden" name="id" value="@Model.Id" />
+            <input class="quantity-input" type="number" name="quantity" value="@order.Quantity" min="1" />
+            <button class="clear-button" type="submit">
+                <i class="fa-solid fa-pen"></i>
+            </button>
+        </form>
+    </div>
+
+</div>

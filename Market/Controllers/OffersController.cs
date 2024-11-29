@@ -97,9 +97,10 @@ namespace Market.Controllers
 
         [HttpGet]
         [Authorize(Roles = "Organization")]
-        public async Task<IActionResult> Discover()
+        public async Task<IActionResult> Discover(string? category)
         {
             List<Offer> offers = await _offerService.GetDiscoverOffers();
+            if (category != null) offers = offers.Where(x => x.Stock.OfferType.Category == category).ToList();
             return View(offers);
         }
         

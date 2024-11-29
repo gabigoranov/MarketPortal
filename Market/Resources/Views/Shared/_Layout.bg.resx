@@ -126,7 +126,7 @@
   <data name="Dashboard" xml:space="preserve">
     <value>Управление</value>
   </data>
-  <data name="Dsicover" xml:space="preserve">
+  <data name="Disc" xml:space="preserve">
     <value>Открийте</value>
   </data>
   <data name="Help" xml:space="preserve">
@@ -134,6 +134,9 @@
   </data>
   <data name="History" xml:space="preserve">
     <value>История</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Начало</value>
   </data>
   <data name="Inventory" xml:space="preserve">
     <value>Стоки</value>

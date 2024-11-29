@@ -27,13 +27,13 @@
                 <a class="logo" asp-area="" asp-controller="Home" asp-action="Landing">Market</a>
                 <ul class="sidebar-navigation">
                     <li class="sidebar-item">
-                        <a class="sidebar-link" asp-area="" asp-controller="Home" asp-action="Index"><i class="fa-solid fa-gauge sidebar-icon"></i>@Localizer["Dashboard"]</a>
+                        <a class="sidebar-link" asp-area="" asp-controller="Home" asp-action="@(User.IsInRole("Organization") ? "Home" : "Index")"><i class="fa-solid fa-gauge sidebar-icon"></i>@(User.IsInRole("Organization") ? Localizer["Home"] : Localizer["Dashboard"])</a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" asp-area="" asp-controller="Orders" asp-action="Index"><i class="fa-solid fa-truck sidebar-icon"></i>@Localizer["Orders"]</a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" asp-area="" asp-controller="Offers" asp-action="@(User.IsInRole("Seller") ? "Index" : "Discover")"><i class="fa-brands fa-buffer sidebar-icon"></i>@(User.IsInRole("Seller") ? @Localizer["Offers"] : @Localizer["Discover"])</a>
+                        <a class="sidebar-link" asp-area="" asp-controller="Offers" asp-action="@(User.IsInRole("Organization") ? "Discover" : "Index")"><i class="fa-brands fa-buffer sidebar-icon"></i>@(User.IsInRole("Organization") ? Localizer["Discover"] : Localizer["Offers"])</a>
                     </li>
                     @if(User.IsInRole("Seller"))
                     {

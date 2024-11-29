@@ -5,7 +5,6 @@
 @{
 
     List<string>? imageURLs = ViewBag.ImageURLs as List<string>;
-    int quantity = 0;
     ViewData["Title"] = "Cart";
     Model.Price = Model.Orders.Select(x => x.Price).Sum();
 }
@@ -17,35 +16,7 @@
         {
             Order order = Model.Orders.ToList()[i];
 
-            <div class="cart-order">
-                <img class="cart-order__image" src="@imageURLs[i]" />
-                <div class="cart-order-container">
-                    <h2 class="cart-order-container__title">
-                        @(order.Title) - @(order.Quantity) KG
-                    </h2>
-                    <p class="cart-order-container__description">@order.Offer.Description</p>
-                    <div class="cart-order-container-info">
-                        <h4>@order.Offer.Town</h4>
-                        <h4>@(order.Price) BGN</h4>
-                    </div>
-
-                </div>
-                <div class="cart-order-manage-container">
-                    <form asp-controller="Cart" asp-action="Delete" method="post" asp-route-id="">
-                        <button class="clear-button" value="@Model.Orders.IndexOf(order)" type="submit">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                    </form>
-                    <form class="quantity-form" asp-controller="Cart" asp-action="Quantity" method="post" asp-route-id="@Model.Orders.IndexOf(order)" asp-route-quantity="@quantity">
-                        <input type="hidden" name="id" value="@Model.Orders.IndexOf(order)" />
-                        <input class="quantity-input" type="number" name="quantity" value="@order.Quantity" min="1" />
-                        <button class="clear-button" type="submit">
-                            <i class="fa-solid fa-pen"></i>
-                        </button>
-                    </form>
-                </div>
-
-            </div>
+            <partial name="_CartOrderPartial" model="new CartOrderViewModel(order, imageURLs[i], Model.Orders.IndexOf(order))" />
             
         }
     </div>

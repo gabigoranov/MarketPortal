@@ -1,59 +1,60 @@
-@using Market.Models
 @using Market.Data.Models
-@model OverviewViewModel
+@using Market.Services
+@using Market.Services.Cart
+@inject ICartService _cartService
+@inject IUserService _userService
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 
 @{
     ViewData["Title"] = "Home";
+    Purchase cart = _cartService.GetPurchase() ?? new Purchase();
+    List<Purchase> history = await _userService.GetUserBoughtPurchases();
+    List<string>? urls = ViewBag.ImageURLs as List<string>;
 }
 
+<section class="home-section">
+    <div class="discover-categories">
+        <a class="category vegetables" category="Vegetables" asp-controller="Offers" asp-action="Discover" asp-route-category="Vegetables">
+            <h2>@Localizer["Vegetables"]</h2>
+        </a>
+        <a class="category fruits" category="Fruits" asp-controller="Offers" asp-action="Discover" asp-route-category="Fruits">
+            <h2>@Localizer["Fruits"]</h2>
+        </a>
+        <a class="category dairy" category="Dairy" asp-controller="Offers" asp-action="Discover" asp-route-category="Dairy">
+            <h2>@Localizer["Dairy"]</h2>
+        </a>
+        <a class="category meat" category="Meat" asp-controller="Offers" asp-action="Discover" asp-route-category="Meat">
+            <h2>@Localizer["Meat"]</h2>
+        </a>
+    </div>
 
-<div class="overview-container">
-    <div class="orders">
-        <h2>
-            Incoming Orders:
-        </h2>
-        <a asp-action="Index" asp-controller="Orders">For more info click here</a>
-        <hr />
-        <br />
-        <div class="orders gapped scrollable" style="height: 80%;">
-            @foreach (Order order in Model.Orders.Where(x => x.IsAccepted == false && x.IsDenied == false).Reverse().ToList())
-            {
-                <partial name="_OrderPartial" model="@order" />
-            }
+    <div class="home">
+        <div class="home-container">
+            <h1 class="home-container__title">@Localizer["RPurchases"]</h1>
+            <div class="home-container-items">
+                @foreach (Purchase purchase in history)
+                {
+                    <partial name="_SimpleHistoryPurchasePartial" model="@purchase" />
+                }
+            </div>
+            <a class="action-button" asp-action="Index" asp-controller="Cart">@Localizer["Details"]</a>
+        </div>
+        <div class="home-container">
+            <h1 class="home-container__title">@Localizer["Cart"]</h1>
+            <div class="home-container-items">
+                @foreach(Order order in cart.Orders)
+                {
+                    int index = cart.Orders.IndexOf(order);
+                    <partial name="_SimpleCartOrderPartial" model="@(new CartOrderViewModel(order, urls[index], index))" />
+                }
+            </div>
+            <a class="action-button" asp-action="History" asp-controller="Orders">@Localizer["Details"]</a>
         </div>
     </div>
-    <div class="money">
-        <canvas id="incomeChart"></canvas>
-    </div>
-    <div class="reviews">
-        <h2>
-            Recent reviews:
-        </h2>
-        <a asp-action="Index" asp-controller="Reviews">For more info click here</a>
-        <hr />
-        <br />
-        <div class="gapped">
-            @foreach (Review review in Model.Reviews.Take(4).Reverse().ToList())
-            {
-                <partial name="_ReviewPartial" model="@review" />
-            }
-        </div>
-    </div>
-    <div class="stocks ">
-        <h2>
-            Low stocks:
-        </h2>
-        <a asp-action="Index" asp-controller="Reviews">For more info click here</a>
-        <hr />
-        <br />
-        <div class="gapped scrollable" style="height: 80%;">
-            @foreach (Stock stock in Model.Stocks.OrderBy(x => x.Quantity).Take(4).Reverse().ToList())
-            {
-                <partial name="_StockPartial" model="@stock" />
-            }
-        </div>
-    </div>
-</div>
+</section>
+
+
 
 
 

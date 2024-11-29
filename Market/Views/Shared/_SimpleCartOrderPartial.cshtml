@@ -1,0 +1,22 @@
+﻿@using Market.Data.Models
+@model CartOrderViewModel
+
+@{
+    Order order = Model.Order;
+    string url = Model.URL;
+}
+
+<div class="cart-order">
+    <img class="cart-order__image" src="@url" />
+    <div class="cart-order-container">
+        <h2 class="cart-order-container__title">
+            @(order.Title) - @(order.Quantity) KG
+        </h2>
+        <p class="cart-order-container__description w-400">@order.Offer.Description</p>
+        <div class="cart-order-container-info">
+            <h4>@order.Offer.Town</h4>
+            <h4>@(order.Price) BGN</h4>
+        </div>
+
+    </div>
+</div>

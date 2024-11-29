@@ -126,14 +126,14 @@
   <data name="Dashboard" xml:space="preserve">
     <value>Dashboard</value>
   </data>
-  <data name="Discover" xml:space="preserve">
-    <value>Discover</value>
-  </data>
   <data name="Help" xml:space="preserve">
     <value>Need Help?</value>
   </data>
   <data name="History" xml:space="preserve">
     <value>History</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
   </data>
   <data name="Inventory" xml:space="preserve">
     <value>Inventory</value>

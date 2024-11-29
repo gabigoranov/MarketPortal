@@ -299,3 +299,7 @@ E:\Projects\Market\Market\obj\Debug\net8.0\Market.Resources.Views.User.Login.bg.
 E:\Projects\Market\Market\obj\Debug\net8.0\Market.Resources.Views.User.Login.en.resources
 E:\Projects\Market\Market\obj\Debug\net8.0\Market.Resources.Views.User.Register.bg.resources
 E:\Projects\Market\Market\obj\Debug\net8.0\Market.Resources.Views.User.Register.en.resources
+E:\Projects\Market\Market\obj\Debug\net8.0\Market.Resources.Views.Offers.Discover.bg.resources
+E:\Projects\Market\Market\obj\Debug\net8.0\Market.Resources.Views.Offers.Discover.en.resources
+E:\Projects\Market\Market\obj\Debug\net8.0\Market.Resources.Views.Home.Home.bg.resources
+E:\Projects\Market\Market\obj\Debug\net8.0\Market.Resources.Views.Home.Home.en.resources

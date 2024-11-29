@@ -1,0 +1,49 @@
+﻿@using Market.Data.Models
+@using Market.Models
+@model HistoryPurchaseViewModel
+
+@{
+    Purchase purchase = Model.Purchase;
+    double rawPercent = (double)purchase.Orders.Count(x => x.IsDelivered) / purchase.Orders.Count() * 100;
+    double percentDelivered = System.Math.Round(rawPercent, 2);
+    Dictionary<int, string> urls = Model.Urls;
+}
+
+
+<div class="history-purchase" data-id="@purchase.Id" data-percentage="@percentDelivered">
+    <div class="history-purchase-container">
+        <h2 class="history-purchase-container__title">
+            Date Ordered: @purchase.DateOrdered.ToShortDateString()
+        </h2>
+        <h2 class="history-purchase-container__title">
+            Address: @purchase.Address
+        </h2>
+    </div>
+    <div class="history-purchase-container-info">
+        <h2 class="history-purchase-container__subtitle">
+            Status: @(percentDelivered)% Delivered
+        </h2>
+        <h2 class="history-purchase-container__subtitle">
+            Price: @purchase.Price BGN
+        </h2>
+    </div>
+
+</div>
+<div class="history-purchase-orders-container" id="@purchase.Id">
+    @foreach (Order order in purchase.Orders)
+    {
+        <div class="cart-order">
+            <img class="cart-order__image" src="@urls[order.Id]" alt="order image" />
+            <div class="cart-order-container">
+                <h2 class="cart-order-container__title">
+                    @(order.Title) - @(order.Quantity) KG
+                </h2>
+                <div class="cart-order-container-info">
+                    <h4>@(order.IsDelivered ? "Delivered" : (order.IsAccepted ? "Accepted" : (order.IsDenied ? "Denied" : "Unknown")))</h4>
+                    <h4>@(order.Price) BGN</h4>
+                </div>
+
+            </div>
+        </div>
+    }
+</div>

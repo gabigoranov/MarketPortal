@@ -1,0 +1,330 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Projects\\Market\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\resources\\views\\offers\\discover.en.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\resources\\views\\offers\\discover.en.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\resources\\views\\shared\\_layout.bg.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\resources\\views\\shared\\_layout.bg.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\resources\\views\\shared\\_layout.en.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\resources\\views\\shared\\_layout.en.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\resources\\views\\home\\home.bg.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\resources\\views\\home\\home.bg.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\resources\\views\\offers\\discover.bg.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\resources\\views\\offers\\discover.bg.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\views\\offers\\discover.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\views\\offers\\discover.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\resources\\views\\home\\home.en.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\resources\\views\\home\\home.en.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\views\\shared\\_historypurchasepartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\views\\shared\\_historypurchasepartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\views\\shared\\_cartorderpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\views\\shared\\_cartorderpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\views\\shared\\_simplehistorypurchasepartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\views\\shared\\_simplehistorypurchasepartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\views\\shared\\_simplecartorderpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\views\\shared\\_simplecartorderpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\views\\orders\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\views\\orders\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|e:\\projects\\market\\market\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC792C5-0413-46F5-B802-54219D82CDE5}|Market\\Market.csproj|solutionrelative:market\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 280,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "E:\\Projects\\Market\\Market\\.gitignore",
+              "RelativeDocumentMoniker": "Market\\.gitignore",
+              "ToolTip": "E:\\Projects\\Market\\Market\\.gitignore",
+              "RelativeToolTip": "Market\\.gitignore",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-11-29T12:41:20.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.en.resx",
+              "DocumentMoniker": "E:\\Projects\\Market\\Market\\Resources\\Views\\Shared\\_Layout.en.resx",
+              "RelativeDocumentMoniker": "Market\\Resources\\Views\\Shared\\_Layout.en.resx",
+              "ToolTip": "E:\\Projects\\Market\\Market\\Resources\\Views\\Shared\\_Layout.en.resx",
+              "RelativeToolTip": "Market\\Resources\\Views\\Shared\\_Layout.en.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-11-29T12:15:06.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\Projects\\Market\\Market\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\Projects\\Market\\Market\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Market\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAACMAAACOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-29T12:12:22.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.bg.resx",
+              "DocumentMoniker": "E:\\Projects\\Market\\Market\\Resources\\Views\\Shared\\_Layout.bg.resx",
+              "RelativeDocumentMoniker": "Market\\Resources\\Views\\Shared\\_Layout.bg.resx",
+              "ToolTip": "E:\\Projects\\Market\\Market\\Resources\\Views\\Shared\\_Layout.bg.resx",
+              "RelativeToolTip": "Market\\Resources\\Views\\Shared\\_Layout.bg.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-11-29T12:12:14.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Discover.bg.resx",
+              "DocumentMoniker": "E:\\Projects\\Market\\Market\\Resources\\Views\\Offers\\Discover.bg.resx",
+              "RelativeDocumentMoniker": "Market\\Resources\\Views\\Offers\\Discover.bg.resx",
+              "ToolTip": "E:\\Projects\\Market\\Market\\Resources\\Views\\Offers\\Discover.bg.resx",
+              "RelativeToolTip": "Market\\Resources\\Views\\Offers\\Discover.bg.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-11-29T12:11:14.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Discover.en.resx",
+              "DocumentMoniker": "E:\\Projects\\Market\\Market\\Resources\\Views\\Offers\\Discover.en.resx",
+              "RelativeDocumentMoniker": "Market\\Resources\\Views\\Offers\\Discover.en.resx",
+              "ToolTip": "E:\\Projects\\Market\\Market\\Resources\\Views\\Offers\\Discover.en.resx",
+              "RelativeToolTip": "Market\\Resources\\Views\\Offers\\Discover.en.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-11-29T12:11:10.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Discover.cshtml",
+              "DocumentMoniker": "E:\\Projects\\Market\\Market\\Views\\Offers\\Discover.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Offers\\Discover.cshtml",
+              "ToolTip": "E:\\Projects\\Market\\Market\\Views\\Offers\\Discover.cshtml",
+              "RelativeToolTip": "Market\\Views\\Offers\\Discover.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-29T11:53:37.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "_SimpleHistoryPurchasePartial.cshtml",
+              "DocumentMoniker": "E:\\Projects\\Market\\Market\\Views\\Shared\\_SimpleHistoryPurchasePartial.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Shared\\_SimpleHistoryPurchasePartial.cshtml",
+              "ToolTip": "E:\\Projects\\Market\\Market\\Views\\Shared\\_SimpleHistoryPurchasePartial.cshtml",
+              "RelativeToolTip": "Market\\Views\\Shared\\_SimpleHistoryPurchasePartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-29T11:52:02.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_HistoryPurchasePartial.cshtml",
+              "DocumentMoniker": "E:\\Projects\\Market\\Market\\Views\\Shared\\_HistoryPurchasePartial.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Shared\\_HistoryPurchasePartial.cshtml",
+              "ToolTip": "E:\\Projects\\Market\\Market\\Views\\Shared\\_HistoryPurchasePartial.cshtml",
+              "RelativeToolTip": "Market\\Views\\Shared\\_HistoryPurchasePartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAUwBAAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-29T11:43:40.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Home.cshtml",
+              "DocumentMoniker": "E:\\Projects\\Market\\Market\\Views\\Home\\Home.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Home\\Home.cshtml",
+              "ToolTip": "E:\\Projects\\Market\\Market\\Views\\Home\\Home.cshtml",
+              "RelativeToolTip": "Market\\Views\\Home\\Home.cshtml",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAAADUAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-29T11:42:56.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "History.cshtml",
+              "DocumentMoniker": "E:\\Projects\\Market\\Market\\Views\\Orders\\History.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Orders\\History.cshtml",
+              "ToolTip": "E:\\Projects\\Market\\Market\\Views\\Orders\\History.cshtml",
+              "RelativeToolTip": "Market\\Views\\Orders\\History.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAB4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-29T11:42:33.777Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 280,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Home.en.resx",
+              "DocumentMoniker": "E:\\Projects\\Market\\Market\\Resources\\Views\\Home\\Home.en.resx",
+              "RelativeDocumentMoniker": "Market\\Resources\\Views\\Home\\Home.en.resx",
+              "ToolTip": "E:\\Projects\\Market\\Market\\Resources\\Views\\Home\\Home.en.resx",
+              "RelativeToolTip": "Market\\Resources\\Views\\Home\\Home.en.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-11-29T12:07:46.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Home.bg.resx",
+              "DocumentMoniker": "E:\\Projects\\Market\\Market\\Resources\\Views\\Home\\Home.bg.resx",
+              "RelativeDocumentMoniker": "Market\\Resources\\Views\\Home\\Home.bg.resx",
+              "ToolTip": "E:\\Projects\\Market\\Market\\Resources\\Views\\Home\\Home.bg.resx",
+              "RelativeToolTip": "Market\\Resources\\Views\\Home\\Home.bg.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-11-29T12:06:47.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "E:\\Projects\\Market\\Market\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Market\\Controllers\\HomeController.cs",
+              "ToolTip": "E:\\Projects\\Market\\Market\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Market\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAAEMAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T10:03:44.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "E:\\Projects\\Market\\Market\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "Market\\Controllers\\CartController.cs",
+              "ToolTip": "E:\\Projects\\Market\\Market\\Controllers\\CartController.cs",
+              "RelativeToolTip": "Market\\Controllers\\CartController.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAA1wBcAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T10:03:26.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_CartOrderPartial.cshtml",
+              "DocumentMoniker": "E:\\Projects\\Market\\Market\\Views\\Shared\\_CartOrderPartial.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Shared\\_CartOrderPartial.cshtml",
+              "ToolTip": "E:\\Projects\\Market\\Market\\Views\\Shared\\_CartOrderPartial.cshtml",
+              "RelativeToolTip": "Market\\Views\\Shared\\_CartOrderPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-29T09:52:08.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "site.css",
+              "DocumentMoniker": "E:\\Projects\\Market\\Market\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "Market\\wwwroot\\css\\site.css",
+              "ToolTip": "E:\\Projects\\Market\\Market\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "Market\\wwwroot\\css\\site.css",
+              "ViewState": "AQIAAPsAAAAAAAAAAAAewBMBAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-29T09:35:06.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "_SimpleCartOrderPartial.cshtml",
+              "DocumentMoniker": "E:\\Projects\\Market\\Market\\Views\\Shared\\_SimpleCartOrderPartial.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Shared\\_SimpleCartOrderPartial.cshtml",
+              "ToolTip": "E:\\Projects\\Market\\Market\\Views\\Shared\\_SimpleCartOrderPartial.cshtml",
+              "RelativeToolTip": "Market\\Views\\Shared\\_SimpleCartOrderPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-29T11:56:48.392Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
