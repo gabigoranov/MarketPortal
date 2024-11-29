@@ -6,5 +6,6 @@ node_modules/
 
 # Ignore all files in the temp directory
 temp/
+.vs/
 
 .vs/Market/FileContentIndex/0b308f5a-dcc2-4212-924a-1892ca58973f.vsidx
